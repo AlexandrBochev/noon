@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Aeonik TRIAL';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('./assets/fonts/AeonikTRIAL-Regular.otf') format('otf')
+}
+@font-face {
+  font-family: 'Aeonik TRIAL';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('./assets/fonts/AeonikTRIAL-Bold.otf') format('otf')
+}
+@font-face {
+  font-family: 'Aeonik TRIAL Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''), url('./assets/fonts/AeonikTRIAL-Light.otf') format('otf')
+}
+
+@layer base {
+  html {
+    font-family: 'Aeonik TRIAL', sans-serif;
+    line-height: normal;
+    color: #F6F6F7;
+    background: #000000;
+  }
+}
+
+.gradient::before {
+  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+}
