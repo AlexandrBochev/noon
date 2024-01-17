@@ -1,6 +1,6 @@
 import { FONT_STYLES_SILVER } from "../../library/constants"
 import { Arrow } from "../Icons/Arrow"
-import { delay, motion as m } from "framer-motion"
+import { motion as m } from "framer-motion"
 
 interface ButtonProps {
   children: React.ReactNode
