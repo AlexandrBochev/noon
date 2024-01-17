@@ -19,11 +19,13 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 
 export default function App() {
   useLayoutEffect(() => {
-    ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
-    })
+    if (ScrollSmoother && window.innerWidth > 768) {
+      ScrollSmoother.create({
+        wrapper: '#smooth-wrapper',
+        content: '#smooth-content',
+        smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+      })
+    }
   }, [])
 
   return (
