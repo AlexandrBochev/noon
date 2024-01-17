@@ -6,8 +6,8 @@ import { navigation } from '../../data/data'
 import { FONT_STYLES_SILVER } from '../../library/constants'
 import { INavigation } from "../../library/types"
 import { useState } from "react"
-import { smoothScroll } from "../../library/Functions"
 import { Button } from "../Button/Button"
+import { scrollDownToSection } from "../../library/Functions"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -58,13 +58,12 @@ const Header = () => {
               className="text-4xl lg:text-base text-center mb-6 lg:mb-0 lg:mr-10 last:m-0"
               onClick={ () => setIsMenuOpen(false) }
             >
-              <a
-                href={`#${ item.id }`}
-                className={`${FONT_STYLES_SILVER} hover:text-white transition-all duration-500`}
-                onClick={ (e) => smoothScroll(e, item.id.toString()) }
+              <div
+                className={`${FONT_STYLES_SILVER} hover:text-white cursor-pointer transition-all duration-500`}
+                onClick={ () => scrollDownToSection(item.title) }
               >
                 { item.title }
-              </a>
+              </div>
             </m.li>
           )}
         </ul>

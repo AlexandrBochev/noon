@@ -5,7 +5,7 @@ import { motion as m } from "framer-motion"
 
 const Welcome = () => {
   return (
-    <section className="relative h-full pt-24 lg:pt-32 pb-24 lg:pb-[13rem]" id='2'>
+    <section className="relative h-full pt-24 lg:pt-32 pb-24 lg:pb-[13rem] Service" id="Service">
       <m.img
         initial={{ opacity: 0.1, }}
         whileInView={{ opacity: 1, }}

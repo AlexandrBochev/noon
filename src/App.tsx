@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
 
 export default function App() {
   useLayoutEffect(() => {
-    if (ScrollSmoother && window.innerWidth > 768) {
+    if (ScrollSmoother && window.innerWidth > 1024) {
       ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',

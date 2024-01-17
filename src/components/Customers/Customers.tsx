@@ -5,7 +5,7 @@ import { motion as m } from "framer-motion"
 
 const Customers = () => {
   return (
-    <section className="container mb-18 lg:mb-20 mx-auto" id='3'>
+    <section className="container mb-18 lg:mb-20 mx-auto Customers" id="Customers">
       <div className="w-full max-w-67 2xl:max-w-105 mb-9 lg:mb-14 mx-auto">
         <Title props={ titleItems[6] } />
       </div>

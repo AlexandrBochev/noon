@@ -11,7 +11,7 @@ import { motion as m } from "framer-motion"
 
 const Meet = () => {
   return (
-    <section className="container mx-auto overflow-hidden" id='1'>
+    <section className="container mx-auto overflow-hidden About" id="About">
       <div className="mb-20">
         <Title props={ titleItems[0] } />
       </div>

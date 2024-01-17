@@ -6,7 +6,7 @@ import { INoon } from '../../library/types'
 import { motion as m } from "framer-motion"
 import { ButtonTransparent } from '../ButtonTransparent/ButtonTransparent'
 import { FONT_STYLES_SILVER } from '../../library/constants'
-import { smoothScroll } from '../../library/Functions'
+import { scrollDownToSection } from '../../library/Functions'
 
 const Intro = () => {
   return (
@@ -64,23 +64,22 @@ const Intro = () => {
             <p className="text-center text-white text-base lg:text-lg">Noon.ai</p>
           </m.a>
 
-          <a href="#1" onClick={ (e) => smoothScroll(e, "1") }>
-            <button
-              className={`
-                relative w-20 h-20 md:hidden flex flex-col items-center justify-center rounded-full backdrop-blur-sm mb-12 p-2
-                ${ FONT_STYLES_SILVER } hover:text-white group
-              `}
-            >
-              <p className="text-sm leading-none">Scroll Down</p>
-              <img src={arrowDown} alt="arrow down" className="w-5 h-5 group-hover:mt-1" />
-              <m.img
-                initial={{ rotate: 0 }}
-                whileInView={{ rotate: 360 }}
-                transition={{ duration: 0.8, delay: 1.6, ease: "easeInOut" }}
-                src={ circleBtn } alt="Circle Btn"
-                className="absolute top-0 left-0" />
-            </button>
-          </a>
+          <button
+            className={`
+              relative w-20 h-20 md:hidden flex flex-col items-center justify-center rounded-full backdrop-blur-sm mb-12 p-2
+              ${ FONT_STYLES_SILVER } hover:text-white group
+            `}
+            onClick={ () => scrollDownToSection('About') }
+          >
+            <p className="text-sm leading-none">Scroll Down</p>
+            <img src={arrowDown} alt="arrow down" className="w-5 h-5 group-hover:mt-1" />
+            <m.img
+              initial={{ rotate: 0 }}
+              whileInView={{ rotate: 360 }}
+              transition={{ duration: 0.8, delay: 1.6, ease: "easeInOut" }}
+              src={ circleBtn } alt="Circle Btn"
+              className="absolute top-0 left-0" />
+          </button>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-black to-black/0" />

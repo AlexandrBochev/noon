@@ -11,7 +11,7 @@ import { motion as m } from "framer-motion"
 
 const Workforce = () => {
   return (
-    <section className="container flex flex-col items-center justify-center pb-24 lg:pb-28 mx-auto" id="4">
+    <section className="container flex flex-col items-center justify-center pb-24 lg:pb-28 mx-auto Articles" id="Articles">
       <div className="relative w-full flex flex-col items-center justify-center">
         <img src={ workforceBg } alt="Background" className="absolute -top-6 left-0 w-full h-full object-cover" />
         <div className="max-w-72 md:max-w-none pt-12 pb-6">
