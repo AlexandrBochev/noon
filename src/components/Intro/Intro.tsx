@@ -10,13 +10,13 @@ import { scrollDownToSection } from '../../library/Functions'
 
 const TitleMotion = {
   animate: {
-    background: [
-    'linear-gradient(0deg, #2F80F4, #E8D3BE)',
-    'linear-gradient(360deg, #2F80F4, #E8D3BE)',
-    'linear-gradient(0deg, #2F80F4, #E8D3BE)',
+    backgroundImage: [
+    'linear-gradient(0deg, #2F80F4, #E8D3BE, #E8D3BE)',
+    'linear-gradient(360deg, #2F80F4, #E8D3BE, #E8D3BE)',
+    'linear-gradient(0deg, #2F80F4, #E8D3BE, #E8D3BE)',
     ],
   },
-  transition: { repeat: Infinity, duration: 20 },
+  transition: { repeat: Infinity, duration: 6 },
 }
 
 // bg-clip-text text-transparent bg-gradient-to-r from-[#2F80F4] to-[#E8D3BE]
@@ -33,23 +33,33 @@ const Intro = () => {
       />
 
       <div className="relative container h-svh flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
-        <div className="flex flex-col items-center justify-center">
-          <m.h1
-            className="flex mb-4"
-            { ...TitleMotion }
-          >
+        <div className="relative flex flex-col items-center justify-center">
+          <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.6 }}>
+            <m.div className="flex mb-4 bg-clip-text text-transparent" { ...TitleMotion }>
+              {noon.map((item: INoon) =>
+                <m.span
+                  key={item.id}
+                  className="text-[6.625rem] lg:text-[11.25rem] leading-none"
+                >
+                  {item.title}
+                </m.span>
+              )}
+            </m.div>
+          </m.div>
+
+          <m.div className="absolute inset-0 flex mb-4">
             {noon.map((item: INoon) =>
               <m.span
-                // initial={{ opacity: 0, filter: "blur(10px)", x: item.x }}
-                // animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
-                // transition={{ duration: 1, delay: item.id * 0.1, ease: "easeInOut" }}
+                initial={{ opacity: 0, filter: "blur(12px)", x: item.x, scale: 1.2 }}
+                animate={{ opacity: [1, 1, 0], filter: ["blur(12px)", "blur(8px)", "blur(0px)"], x: [item.x, 0, 0], scale: [1.2, 1, 1] }}
+                transition={{ duration: 1.6, delay: item.id * 0.1, ease: "easeInOut" }}
                 key={item.id}
                 className="text-[6.625rem] lg:text-[11.25rem] leading-none"
               >
                 {item.title}
               </m.span>
             )}
-          </m.h1>
+          </m.div>
 
           <m.p
             initial={{ opacity: 0, y: 20 }}
