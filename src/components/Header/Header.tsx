@@ -86,7 +86,7 @@ const Header = () => {
             className="relative py-2 px-4 lg:py-3 lg:px-5.5 border rounded-full border-transparent group bg-[#131222] overflow-hidden"
             onClick={ () => setIsMenuOpen(false) }
           >
-            <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/10 to-black/0 transition-all duration-1000" />
+            <div className="absolute inset-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/10 to-black/0 transition-all duration-1000" />
             <p className={`${FONT_STYLES_SILVER} text-sm lg:text-base`}>
               Login
             </p>

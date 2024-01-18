@@ -29,7 +29,7 @@ const ButtonTransparent = ({ children, arrow, onClick }: ButtonProps) => {
       "
       onClick={ onClick }
     >
-      <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/20 to-black/0 transition-all duration-1000" />
+      <div className="absolute inset-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/20 to-black/0 transition-all duration-1000" />
       <div className={`flex items-center text-nowrap ${FONT_STYLES_SILVER}
       bg-clip-text text-transparent bg-gradient-to-t from-white to-white/40
       hover:text-white transition-all duration-500`}>
