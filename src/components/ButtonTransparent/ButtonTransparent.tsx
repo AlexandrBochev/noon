@@ -29,7 +29,9 @@ const ButtonTransparent = ({ children, arrow, onClick }: ButtonProps) => {
       "
       onClick={ onClick }
     >
-      <div className={`flex items-center text-nowrap ${FONT_STYLES_SILVER} hover:text-white transition-all duration-500`}>
+      <div className={`flex items-center text-nowrap ${FONT_STYLES_SILVER}
+      bg-clip-text text-transparent bg-gradient-to-t from-white to-white/40
+      hover:text-white transition-all duration-500`}>
           { children }
           { arrow && <Arrow /> }
       </div>

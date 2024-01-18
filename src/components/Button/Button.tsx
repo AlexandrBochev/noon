@@ -1,6 +1,7 @@
 import { FONT_STYLES_SILVER } from "../../library/constants"
 import { Arrow } from "../Icons/Arrow"
 import { motion as m } from "framer-motion"
+import bg from '../../assets/images/btn/stars.svg'
 
 interface ButtonProps {
   children: React.ReactNode
@@ -9,23 +10,24 @@ interface ButtonProps {
 }
 
 const btnMotion = {
-  initial: {
-    background: 'linear-gradient(#010010, #010010) padding-box, linear-gradient(90deg, rgb(255 255 255 / 0.3), rgb(255 255 255 / 0.3), white) border-box',
+  animate: {
+    background: [
+    'linear-gradient(0deg, #010010, #010010, #010010, #010010, rgb(1 0 16 / 0.6)) padding-box, linear-gradient(0deg, rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.9)) border-box',
+    'linear-gradient(360deg, #010010, #010010, #010010, #010010, rgb(1 0 16 / 0.6)) padding-box, linear-gradient(360deg, rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.9)) border-box',
+    ],
   },
-  whileInView: {
-    background: 'linear-gradient(#010010, #010010) padding-box, linear-gradient(450deg, rgb(255 255 255 / 0.3), rgb(255 255 255 / 0.3), white) border-box',
-  },
-  transition: { delay: 0.8, duration: 1.2 },
+  transition: { repeat: Infinity, duration: 4 },
 }
 
 const Button = ({ children, arrow, onClick }: ButtonProps) => {
   return (
     <m.button
         { ...btnMotion }
-        className="h-12 px-5.5 border rounded-full border-transparent"
+        className="relative py-2 px-4 lg:py-3 lg:px-5.5 border rounded-full border-transparent overflow-hidden"
         onClick={ onClick }
       >
-        <div className={`flex items-center text-nowrap hover:text-white transition-all duration-500 ${FONT_STYLES_SILVER}`}>
+        <img src={ bg } alt="Background" className="absolute inset-0 -z-10" />
+        <div className={`flex items-center text-sm lg:text-base text-nowrap hover:text-white transition-all duration-500 ${FONT_STYLES_SILVER}`}>
             { children }
             { arrow && <Arrow /> }
         </div>
