@@ -83,10 +83,11 @@ const Header = () => {
           <Button onClick={ () => setIsMenuOpen(false) }>Enter Code</Button>
           <div className="w-5" />
           <button
-            className="h-12.5 px-5.5 border rounded-full border-transparent bg-[#131222]"
+            className="relative py-2 px-4 lg:py-3 lg:px-5.5 border rounded-full border-transparent group bg-[#131222] overflow-hidden"
             onClick={ () => setIsMenuOpen(false) }
           >
-            <p className={`${FONT_STYLES_SILVER} hover:text-white transition-all duration-500`}>
+            <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/10 to-black/0 transition-all duration-1000" />
+            <p className={`${FONT_STYLES_SILVER} text-sm lg:text-base`}>
               Login
             </p>
           </button>
@@ -99,14 +100,14 @@ const Header = () => {
         transition={{ duration: 1, ease: "easeInOut", }}
         className="lg:hidden"
       >
-        <div className={`flex transition-all duration-500 ${ isMenuOpen ? 'opacity-0 scale-0 -translate-y-12' : 'opacity-100 scale-100 translate-y-0' }`}>
+        <div className={`flex transition-all duration-500 mt-2 ${ isMenuOpen ? 'opacity-0 scale-0 -translate-y-12' : 'opacity-100 scale-100 translate-y-0' }`}>
           <Button onClick={ () => setIsMenuOpen(true) }>
             <img src={ burger } alt="Cross" className="mr-2 -mt-0.5" />
             Menu
           </Button>
         </div>
 
-        <div className={`flex transition-all duration-500 ${ isMenuOpen ? 'opacity-100 scale-100 -translate-y-12' : 'opacity-0 scale-0 translate-y-0' }`}>
+        <div className={`flex transition-all duration-500 mt-2 ${ isMenuOpen ? 'opacity-100 scale-100 -translate-y-12' : 'opacity-0 scale-0 translate-y-0' }`}>
           <Button onClick={ () => setIsMenuOpen(false) }>
             <img src={ cross } alt="Cross" className="mr-2 -mt-0.5" />
             Close

@@ -8,6 +8,19 @@ import { ButtonTransparent } from '../ButtonTransparent/ButtonTransparent'
 import { FONT_STYLES_SILVER } from '../../library/constants'
 import { scrollDownToSection } from '../../library/Functions'
 
+// const TitleMotion = {
+//   animate: {
+//     background: [
+//     'linear-gradient(0deg, #2F80F4, #E8D3BE)',
+//     'linear-gradient(360deg, #2F80F4, #E8D3BE)',
+//     'linear-gradient(0deg, #2F80F4, #E8D3BE)',
+//     ],
+//   },
+//   transition: { repeat: Infinity, duration: 20 },
+// }
+
+// bg-clip-text text-transparent bg-gradient-to-r from-[#2F80F4] to-[#E8D3BE]
+
 const Intro = () => {
   return (
     <section className="relative w-full h-full overflow-hidden">
@@ -21,19 +34,22 @@ const Intro = () => {
 
       <div className="relative container h-screen flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
         <div className="flex flex-col items-center justify-center">
-          <div className="flex mb-4">
+          <m.h1
+            className="flex mb-4"
+            // { ...TitleMotion }
+          >
             {noon.map((item: INoon) =>
-              <m.h1
+              <m.span
                 initial={{ opacity: 0, filter: "blur(10px)", x: item.x }}
-                whileInView={{ opacity: 1, filter: "blur(0)", x: 0 }}
+                animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
                 transition={{ duration: 1, delay: item.id * 0.1, ease: "easeInOut" }}
                 key={item.id}
                 className="text-[6.625rem] lg:text-[11.25rem] leading-none"
               >
                 {item.title}
-              </m.h1>
+              </m.span>
             )}
-          </div>
+          </m.h1>
 
           <m.p
             initial={{ opacity: 0, y: 20 }}
