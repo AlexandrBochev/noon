@@ -8,16 +8,16 @@ import { ButtonTransparent } from '../ButtonTransparent/ButtonTransparent'
 import { FONT_STYLES_SILVER } from '../../library/constants'
 import { scrollDownToSection } from '../../library/Functions'
 
-// const TitleMotion = {
-//   animate: {
-//     background: [
-//     'linear-gradient(0deg, #2F80F4, #E8D3BE)',
-//     'linear-gradient(360deg, #2F80F4, #E8D3BE)',
-//     'linear-gradient(0deg, #2F80F4, #E8D3BE)',
-//     ],
-//   },
-//   transition: { repeat: Infinity, duration: 20 },
-// }
+const TitleMotion = {
+  animate: {
+    background: [
+    'linear-gradient(0deg, #2F80F4, #E8D3BE)',
+    'linear-gradient(360deg, #2F80F4, #E8D3BE)',
+    'linear-gradient(0deg, #2F80F4, #E8D3BE)',
+    ],
+  },
+  transition: { repeat: Infinity, duration: 20 },
+}
 
 // bg-clip-text text-transparent bg-gradient-to-r from-[#2F80F4] to-[#E8D3BE]
 
@@ -29,20 +29,20 @@ const Intro = () => {
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-screen h-full object-cover"
+        className="absolute top-0 left-0 w-svh h-full object-cover"
       />
 
-      <div className="relative container h-screen flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
+      <div className="relative container h-svh flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
         <div className="flex flex-col items-center justify-center">
           <m.h1
             className="flex mb-4"
-            // { ...TitleMotion }
+            { ...TitleMotion }
           >
             {noon.map((item: INoon) =>
               <m.span
-                initial={{ opacity: 0, filter: "blur(10px)", x: item.x }}
-                animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
-                transition={{ duration: 1, delay: item.id * 0.1, ease: "easeInOut" }}
+                // initial={{ opacity: 0, filter: "blur(10px)", x: item.x }}
+                // animate={{ opacity: 1, filter: "blur(0px)", x: 0 }}
+                // transition={{ duration: 1, delay: item.id * 0.1, ease: "easeInOut" }}
                 key={item.id}
                 className="text-[6.625rem] lg:text-[11.25rem] leading-none"
               >
@@ -98,7 +98,7 @@ const Intro = () => {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-black to-black/0" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-black to-black/0" /> */}
     </section>
   )
 }
