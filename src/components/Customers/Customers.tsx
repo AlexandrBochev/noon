@@ -2,7 +2,7 @@ import { customersArticle, titleItems } from "../../data/data"
 import { Title } from "../Title/Title"
 import { motion as m } from "framer-motion"
 import { Player } from "@lottiefiles/react-lottie-player"
-import lottielineCustomers from '../../library/lotti/lottie line Customers 2.json'
+import lottielineCustomers from '../../library/lottie/lottie line Customers 2.json'
 
 const Customers = () => {
   return (

@@ -8,7 +8,7 @@ import { CARD_GRADIENT, MEET_MOTION, MEET_MOTION2, WORKFORC_1, WORKFORC_2, WORKF
 import boll from '../../assets/images/workforce/block-1/boll.png'
 import { motion as m } from "framer-motion"
 import { Player } from "@lottiefiles/react-lottie-player"
-import lottieSlideGrid from '../../library/lotti/lottie Slide Grid.json'
+import lottieSlideGrid from '../../library/lottie/lottie slide grid.json'
 
 const Workforce = () => {
   return (

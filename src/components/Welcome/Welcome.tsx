@@ -3,7 +3,7 @@ import { Title } from "../Title/Title"
 import welcomeBg from "../../assets/images/welcome/welcome-bg.png"
 import { motion as m } from "framer-motion"
 import { Player } from "@lottiefiles/react-lottie-player"
-import lottieGlowline from '../../library/lotti/lottie Glow line 1.json'
+import lottieGlowline from '../../library/lottie/lottie Glow line 1.json'
 
 const Welcome = () => {
   return (
