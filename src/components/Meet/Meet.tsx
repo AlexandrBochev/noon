@@ -6,7 +6,7 @@ import { FONT_STYLES_GOLD_HOVER, FONT_STYLES_SILVER, MEET_MOTION, MEET_MOTION4, 
 import percent from "../../assets/images/meet/percent.png"
 import bg from "../../assets/images/meet/bg2.svg"
 import buttons from "../../assets/images/meet/buttons.png"
-import circle from "../../assets/images/meet/circle2.svg"
+import circle from "../../assets/images/meet/circle.png"
 import { motion as m } from "framer-motion"
 import { useState } from "react"
 

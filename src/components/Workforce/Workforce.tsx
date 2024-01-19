@@ -4,13 +4,17 @@ import workforceBlock1 from '../../assets/images/workforce/workforce-block-1.png
 import workforceBlock2 from '../../assets/images/workforce/workforce-block-2.png'
 import workforceBlockItem1 from '../../assets/images/workforce/workforce-block-item-1.png'
 import workforceBlockItem2 from '../../assets/images/workforce/workforce-block-item-2.png'
-import { CARD_GRADIENT, MEET_MOTION, MEET_MOTION2, WORKFORC_1, WORKFORC_2, WORKFORC_3, } from "../../library/constants"
+import { CARD_GRADIENT, MEET_MOTION, WORKFORC_1, WORKFORC_2, WORKFORC_3, } from "../../library/constants"
 import boll from '../../assets/images/workforce/block-1/boll.png'
 import { motion as m } from "framer-motion"
 import { Player } from "@lottiefiles/react-lottie-player"
 import lottieSlideGrid from '../../library/lottie/lottie slide grid.json'
+import { useState } from "react"
 
 const Workforce = () => {
+  const [hover1, setHover1] = useState(false)
+  const [hover2, setHover2] = useState(false)
+
   return (
     <section className="container flex flex-col items-center justify-center mx-auto Articles" id="Articles">
       <div className="relative w-full flex flex-col items-center justify-center pb-15 pt-12 lg:pt-28 lg:pb-20">
@@ -27,7 +31,11 @@ const Workforce = () => {
       </div>
 
       <div className="w-full flex flex-col lg:flex-row items-center justify-between">
-        <m.div className={`relative lg:mr-5 ${CARD_GRADIENT}`} { ...MEET_MOTION }>
+        <m.div
+          className={`relative lg:mr-5 ${CARD_GRADIENT}`} { ...MEET_MOTION }
+          onMouseEnter={ () => setHover1(true) }
+          onMouseLeave={ () => setHover1(false) }
+        >
           <img src={ workforceBlock1 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -45,14 +53,32 @@ const Workforce = () => {
             </m.p>
           </div>
 
-          <m.img src={ workforceBlockItem1 } alt="Workforce Block Item 1" { ...WORKFORC_3 } className="w-full -mt-[20%] -z-10" />
-          <m.img src={ boll } { ...MEET_MOTION2 } alt="Boll" className="absolute bottom-[-4%] left-[-2%] w-[54.4%]" />
+          <m.img
+            src={ workforceBlockItem1 } alt="Workforce Block Item 1"
+            { ...WORKFORC_3 }
+            className="w-full -mt-[20%] -z-10"
+          />
+
+          <m.img
+            src={ boll } alt="Boll"
+            initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
+            whileInView={{ opacity: 1, rotate: !hover1 ? 0 : -45, scale: !hover1 ? 1 : 0.9 }}
+            transition={{ delay: 0.2, duration: 1, ease: 'easeOut' }}
+            className="absolute bottom-[-4%] left-[-2%] w-[54.4%]"
+          />
+
           <div className="absolute bottom-[22%] right-[9%] lg:right-[10.6%] w-[40%] flex flex-col items-end justify">
-            {blockButtons.map(btn =>
+            {blockButtons.map((btn) =>
               <m.img
                 initial={{ opacity: 0, filter: "blur(10px)", scale: 1.2, x: 20, y: -(btn.id * 10) }}
-                whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1, x: 0, y: 0 }}
-                transition={{ delay: btn.id * 0.2,  duration: 0.8, ease: 'easeInOut' }}
+                whileInView={{
+                  opacity: 1, 
+                  filter: "blur(0px)",
+                  scale: !hover1 ? 1 : 1.2,
+                  x: !hover1 ? 0 : 10, 
+                  y: !hover1 ? 0 : -(btn.id * 5), 
+                }}
+                transition={{ delay: btn.id * 0.1,  duration: 0.8, ease: 'easeInOut' }}
                 src={ btn.img } alt="Button" key={ btn.id }
                 className="mb-[6%] w-auto h-auto cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300 ease-in-out z-20"
               />
@@ -60,7 +86,11 @@ const Workforce = () => {
           </div>
         </m.div>
 
-        <m.div className={`relative ${CARD_GRADIENT}`} { ...MEET_MOTION }>
+        <m.div
+          className={`relative ${CARD_GRADIENT}`} { ...MEET_MOTION }
+          onMouseEnter={ () => setHover2(true) }
+          onMouseLeave={ () => setHover2(false) }
+        >
           <img src={ workforceBlock2 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -83,8 +113,14 @@ const Workforce = () => {
             {blockButtons2.map(btn =>
               <m.img
                 initial={{ opacity: 0, filter: "blur(4px)", scale: 1.2, x: 40, y: -(btn.id * 20) }}
-                whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1, x: 0, y: 0 }}
-                transition={{ delay: btn.id * 0.2,  duration: 0.8, ease: 'easeInOut' }}
+                whileInView={{
+                  opacity: 1,
+                  filter: "blur(0px)",
+                  scale: !hover2 ? 1 : 1.2,
+                  x: !hover2 ? 0 : 20,
+                  y: !hover2 ? 0 : -(btn.id * 10),
+                }}
+                transition={{ delay: btn.id * 0.1,  duration: 0.8, ease: 'easeInOut' }}
                 src={ btn.img } alt="Button" key={ btn.id }
                 className="w-auto h-auto mb-[1%] lg:mb-[1.5%] cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300 ease-in-out z-20"
               />
