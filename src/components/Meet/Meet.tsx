@@ -2,14 +2,29 @@ import { meetItems, titleItems } from "../../data/data"
 import { IMeetItems } from "../../library/types"
 import { Title } from "../Title/Title"
 import crosses from "../../assets/images/meet/crosses.png"
-import { FONT_STYLES_GOLD_HOVER, FONT_STYLES_SILVER, MEET_MOTION, MEET_MOTION2, MEET_MOTION3, MEET_MOTION4, MEET_MOTION5 } from "../../library/constants"
+import { FONT_STYLES_GOLD_HOVER, FONT_STYLES_SILVER, MEET_MOTION, MEET_MOTION4, MEET_MOTION5 } from "../../library/constants"
 import percent from "../../assets/images/meet/percent.png"
-import bg from "../../assets/images/meet/bg.png"
+import bg from "../../assets/images/meet/bg2.svg"
 import buttons from "../../assets/images/meet/buttons.png"
-import circle from "../../assets/images/meet/circle.png"
+import circle from "../../assets/images/meet/circle2.svg"
 import { motion as m } from "framer-motion"
+import { useState } from "react"
 
 const Meet = () => {
+  const [hover, setHover] = useState(false)
+
+  const motion1 = {
+    initial: { opacity: 0, rotate: -45, scale: 0.8 },
+    whileInView: { opacity: 1, rotate: !hover ? 0 : -45, scale: !hover ? 1 : 0.9 },
+    transition: { duration: 0.8, ease: 'easeInOut' },
+  } 
+
+  const motion2 = {
+    initial: { opacity: 0, rotate: 45, scale: 0.8 },
+    whileInView: { opacity: 1, rotate: !hover ? 0 : 45, scale: !hover ? 1 : 0.9 },
+    transition: { duration: 0.8, ease: 'easeInOut' },
+  }
+
   return (
     <section className="container mx-auto overflow-hidden About" id="About">
       <div className="mb-20">
@@ -17,10 +32,24 @@ const Meet = () => {
       </div>
 
       <div className="w-full flex flex-col lg:flex-row items-center justify-center">
-        <div className="relative max-w-154 flex items-center justify-center overflow-hidden">
+        <div
+          className="relative max-w-154 flex items-center justify-center overflow-hidden"
+          onMouseEnter={ () => setHover(true) }
+          onMouseLeave={ () => setHover(false) }
+        >
           <m.img src={ bg } alt="Background" { ...MEET_MOTION } />
-          <m.img src={ buttons } alt="Buttons" { ...MEET_MOTION2 } className="absolute w-[74%]" />
-          <m.img src={ circle } alt="Buttons" { ...MEET_MOTION3 } className="absolute w-[80%] top-0" />
+
+          <m.img
+            src={ buttons } alt="Buttons"
+            { ...motion2 }
+            className="absolute w-[74%]"
+          />
+
+          <m.img
+            src={ circle } alt="Circle"
+            { ...motion1 }
+            className="absolute w-[80%] top-0"
+          />
         </div>
 
         <div className="w-15 h-24" />

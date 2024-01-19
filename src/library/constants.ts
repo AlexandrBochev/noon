@@ -36,6 +36,7 @@ export const MEET_MOTION4 = {
 export const MEET_MOTION5 = {
   initial: { opacity: 0, x: 20 },
   whileInView: { opacity: 1, x: 0 },
+  transition: { delay: 0.6,  duration: 0.8, ease: 'easeOut' },
 }
 
 export const CARDS = {
