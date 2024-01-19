@@ -8,7 +8,7 @@ import { Button } from "../Button/Button"
 
 const Partners = () => {
   return (
-    <section className="pt-12 pb-18 lg:pt-20 lg:mb-9">
+    <section className="pt-12 pb-12 lg:pt-20 lg:pb-9">
       <m.div
         { ...CARDS }
         className="w-[86rem] mb-10 mx-auto overflow-hidden"

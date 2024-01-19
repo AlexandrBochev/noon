@@ -2,7 +2,7 @@
 export const FONT_STYLES_SILVER = "bg-clip-text text-transparent bg-gradient-to-t from-white to-white/40"
 export const FONT_STYLES_GOLD = "bg-clip-text text-transparent bg-gradient-to-r from-[#F0C78E] to-[#E98F81]"
 export const FONT_STYLES_GOLD_HOVER = "group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r from-[#F0C78E] to-[#E98F81] transition-all duration-500"
-export const CARD_GRADIENT = "mb-7.5 lg:mr-5 lg:mb-0 p-4 sm:p-8 xl:p-11 relative w-full h-full flex flex-col items-center justify-center overflow-hidden border border-transparent rounded-[1.25rem] lg:rounded-[1.875rem] before:bg-gradient-to-b before:from-[#342C3F]/70 before:to-[#3E3250]/50 before:border-inherit before:border before:rounded-[1.25rem] before:lg:rounded-[1.875rem] before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient"
+export const CARD_GRADIENT = "mb-7.5 lg:mb-0 p-4 sm:p-8 xl:p-11 relative w-full h-full flex flex-col items-center justify-center overflow-hidden border border-transparent rounded-[1.25rem] lg:rounded-[1.875rem] before:bg-gradient-to-b before:from-[#342C3F]/70 before:to-[#3E3250]/50 before:border-inherit before:border before:rounded-[1.25rem] before:lg:rounded-[1.875rem] before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient"
 
 // Motion Variants
 export const TITLE_MOTION = {

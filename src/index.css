@@ -32,3 +32,12 @@
 .gradient::before {
   mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 }
+
+.lottie svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  height: 100%;
+}

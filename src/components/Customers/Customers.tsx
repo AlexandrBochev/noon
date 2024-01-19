@@ -1,11 +1,12 @@
 import { customersArticle, titleItems } from "../../data/data"
 import { Title } from "../Title/Title"
-import customersBg from "../../assets/images/customers/customers-bg.jpg"
 import { motion as m } from "framer-motion"
+import { Player } from "@lottiefiles/react-lottie-player"
+import lottielineCustomers from '../../library/lotti/lottie line Customers 2.json'
 
 const Customers = () => {
   return (
-    <section className="container mb-18 lg:mb-20 mx-auto Customers" id="Customers">
+    <section className="container mb-18 lg:mb-20 mt-25 lg:mt-30 mx-auto Customers" id="Customers">
       <div className="w-full max-w-67 2xl:max-w-105 mb-9 lg:mb-14 mx-auto">
         <Title props={ titleItems[6] } />
       </div>
@@ -19,12 +20,27 @@ const Customers = () => {
           before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
         "
       >
-        <m.img
+        <m.div
+          initial={{ opacity: 0.1, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ delay: 0.8, duration: 1.8 }}
+        >
+          <Player
+            autoplay
+            loop
+            src={lottielineCustomers}
+            className="absolute inset-0 w-full h-full -z-10 object-cover lottie"
+          />
+        </m.div>
+
+        {/* <m.img
           initial={{ opacity: 0.1, }}
           whileInView={{ opacity: 1, }}
           transition={{ delay: 0.8, duration: 1.8 }}
           src={ customersBg } alt="Background"
-          className="absolute inset-0 w-full h-full -z-10 object-cover" />
+          className="absolute inset-0 w-full h-full -z-10 object-cover"
+        /> */}
+
         <div className="max-w-[43.75rem] flex flex-col items-center text-center text-lg lg:text-[1.375rem] text-white z-50">
           <p className="mb-6.5">
             {customersArticle.map((word, i) =>

@@ -29,7 +29,7 @@ const Intro = () => {
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-svh h-full object-cover"
+        className="absolute top-0 left-0 w-full h-svh object-cover"
       />
 
       <div className="relative container h-svh flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
@@ -92,7 +92,7 @@ const Intro = () => {
 
           <button
             className={`
-              relative w-20 h-20 md:hidden flex flex-col items-center justify-center rounded-full backdrop-blur-sm mb-12 p-2
+              relative w-20 h-20 md:hidden flex flex-col items-center justify-center rounded-full backdrop-blur-sm mb-8 p-2
               ${ FONT_STYLES_SILVER } hover:text-white group
             `}
             onClick={ () => scrollDownToSection('About') }
@@ -108,7 +108,7 @@ const Intro = () => {
           </button>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-black to-black/0" /> */}
+      <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-black to-black/0" />
     </section>
   )
 }

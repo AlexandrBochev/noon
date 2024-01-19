@@ -44,7 +44,7 @@ const Header = () => {
       <nav
         className={`
           absolute left-[50%] translate-x-[-50%] transition-all duration-700 z-20
-          ${isMenuOpen ? 'translate-y-[24vh] opacity-100' : 'translate-y-[-100%] opacity-0'}
+          ${isMenuOpen ? 'translate-y-[28vh] opacity-100' : 'translate-y-[-100%] opacity-0'}
           lg:translate-y-[50%] lg:opacity-100
         `}
       >
@@ -73,7 +73,8 @@ const Header = () => {
         initial={{ opacity: 0, scale: 0.7 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeInOut", }}
-        className="absolute lg:static bottom-[20vh] left-0 flex items-center justify-center w-full lg:w-auto">
+        className="absolute lg:static bottom-[10vh] left-0 flex items-center justify-center w-full lg:w-auto"
+      >
         <div
           className={`
             ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-154 opacity-0'}

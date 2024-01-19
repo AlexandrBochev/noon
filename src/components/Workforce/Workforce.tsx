@@ -1,6 +1,5 @@
 import { blockButtons, blockButtons2, titleItems } from "../../data/data"
 import { Title } from "../Title/Title"
-import workforceBg from '../../assets/images/workforce/workforce-bg.png'
 import workforceBlock1 from '../../assets/images/workforce/workforce-block-1.png'
 import workforceBlock2 from '../../assets/images/workforce/workforce-block-2.png'
 import workforceBlockItem1 from '../../assets/images/workforce/workforce-block-item-1.png'
@@ -8,19 +7,27 @@ import workforceBlockItem2 from '../../assets/images/workforce/workforce-block-i
 import { CARD_GRADIENT, MEET_MOTION, MEET_MOTION2, WORKFORC_1, WORKFORC_2, WORKFORC_3, } from "../../library/constants"
 import boll from '../../assets/images/workforce/block-1/boll.png'
 import { motion as m } from "framer-motion"
+import { Player } from "@lottiefiles/react-lottie-player"
+import lottieSlideGrid from '../../library/lotti/lottie Slide Grid.json'
 
 const Workforce = () => {
   return (
-    <section className="container flex flex-col items-center justify-center pb-24 lg:pb-28 mx-auto Articles" id="Articles">
-      <div className="relative w-full flex flex-col items-center justify-center">
-        <img src={ workforceBg } alt="Background" className="absolute -top-6 left-0 w-full h-full object-cover" />
-        <div className="max-w-72 md:max-w-none pt-12 pb-6">
+    <section className="container flex flex-col items-center justify-center mx-auto Articles" id="Articles">
+      <div className="relative w-full flex flex-col items-center justify-center pb-15 pt-12 lg:pt-28 lg:pb-20">
+        <Player
+          autoplay
+          loop
+          src={lottieSlideGrid}
+          className="absolute inset-0 w0full h-full object-cover lottie -z-10"
+        />
+
+        <div className="max-w-72 md:max-w-none">
           <Title props={ titleItems[5] } />
         </div>
       </div>
 
-      <div className="w-full flex flex-col lg:flex-row items-center">
-        <m.div className={`relative max-h-[36.125rem] ${CARD_GRADIENT}`} { ...MEET_MOTION }>
+      <div className="w-full flex flex-col lg:flex-row items-center justify-between">
+        <m.div className={`relative lg:mr-5 ${CARD_GRADIENT}`} { ...MEET_MOTION }>
           <img src={ workforceBlock1 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -53,7 +60,7 @@ const Workforce = () => {
           </div>
         </m.div>
 
-        <m.div className={`relative max-h-[36.125rem] ${CARD_GRADIENT}`} { ...MEET_MOTION }>
+        <m.div className={`relative ${CARD_GRADIENT}`} { ...MEET_MOTION }>
           <img src={ workforceBlock2 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
