@@ -22,7 +22,7 @@ export interface TickerProps {
 export interface IHeadCard {
   id: number
   name: string
-  btn: string
+  position: string
   img: string
 }
 

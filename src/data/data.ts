@@ -63,14 +63,14 @@ export const logos = [
 ]
 
 export const headCards = [
-  { id: 1, name: 'Vicki Tung', img: women1 },
-  { id: 2, name: 'Vicki Tung', img: women2 },
-  { id: 3, name: 'Vicki Tung', img: women3 },
-  { id: 4, name: 'Vicki Tung', img: women4 },
-  { id: 5, name: 'Vicki Tung', img: women1 },
-  { id: 6, name: 'Vicki Tung', img: women2 },
-  { id: 7, name: 'Vicki Tung', img: women3 },
-  { id: 8, name: 'Vicki Tung', img: women4 },
+  { id: 1, name: 'Vicki Tung', position: "Goldman Sachs", img: women1 },
+  { id: 2, name: 'Vicki Tung', position: "Logitech", img: women2 },
+  { id: 3, name: 'Vicki Tung', position: "MetLife", img: women3 },
+  { id: 4, name: 'Vicki Tung', position: "TransformX 2022", img: women4 },
+  { id: 5, name: 'Vicki Tung', position: "Goldman Sachs", img: women1 },
+  { id: 6, name: 'Vicki Tung', position: "Logitech", img: women2 },
+  { id: 7, name: 'Vicki Tung', position: "MetLife", img: women3 },
+  { id: 8, name: 'Vicki Tung', position: "TransformX 2022", img: women4 },
 ]
 
 export const titleItems = [
