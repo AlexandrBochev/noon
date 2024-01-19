@@ -19,11 +19,9 @@ const TitleMotion = {
   transition: { repeat: Infinity, duration: 6 },
 }
 
-// bg-clip-text text-transparent bg-gradient-to-r from-[#2F80F4] to-[#E8D3BE]
-
 const Intro = () => {
   return (
-    <section className="relative w-full h-full overflow-hidden">
+    <section className="relative w-full h-svh mb-24 lg:mb-35 overflow-hidden">
       <video
         src={ lineWaves }
         autoPlay

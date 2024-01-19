@@ -1,10 +1,6 @@
 import maze from '../assets/images/logos/maze.svg'
 import squarespace from '../assets/images/logos/squarespace.svg'
 import classpass from '../assets/images/logos/classpass.svg'
-import btn1 from '../assets/images/women/women-btn-1.png'
-import btn2 from '../assets/images/women/women-btn-2.png'
-import btn3 from '../assets/images/women/women-btn-3.png'
-import btn4 from '../assets/images/women/women-btn-4.png'
 import women1 from '../assets/images/women/women-1.png'
 import women2 from '../assets/images/women/women-2.png'
 import women3 from '../assets/images/women/women-3.png'
@@ -67,14 +63,14 @@ export const logos = [
 ]
 
 export const headCards = [
-  { id: 1, name: 'Vicki Tung', btn: btn1, img: women1 },
-  { id: 2, name: 'Vicki Tung', btn: btn2, img: women2 },
-  { id: 3, name: 'Vicki Tung', btn: btn3, img: women3 },
-  { id: 4, name: 'Vicki Tung', btn: btn4, img: women4 },
-  { id: 5, name: 'Vicki Tung', btn: btn1, img: women1 },
-  { id: 6, name: 'Vicki Tung', btn: btn2, img: women2 },
-  { id: 7, name: 'Vicki Tung', btn: btn3, img: women3 },
-  { id: 8, name: 'Vicki Tung', btn: btn4, img: women4 },
+  { id: 1, name: 'Vicki Tung', img: women1 },
+  { id: 2, name: 'Vicki Tung', img: women2 },
+  { id: 3, name: 'Vicki Tung', img: women3 },
+  { id: 4, name: 'Vicki Tung', img: women4 },
+  { id: 5, name: 'Vicki Tung', img: women1 },
+  { id: 6, name: 'Vicki Tung', img: women2 },
+  { id: 7, name: 'Vicki Tung', img: women3 },
+  { id: 8, name: 'Vicki Tung', img: women4 },
 ]
 
 export const titleItems = [
