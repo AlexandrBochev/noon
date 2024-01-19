@@ -20,7 +20,7 @@ const ButtonTransparent = ({ children, arrow, onClick }: ButtonProps) => {
       //   before:transition-bg duration-500 ease-in-out
       //   gradient group overflow-hidden
       // "
-      className="relative py-2 px-4 lg:py-3 lg:px-5.5 border border-white/24 rounded-full backdrop-blur-sm bg-[#000010]/30 group z-0"
+      className="relative py-2 px-4 lg:py-3 lg:px-5.5 border border-white/30 rounded-full backdrop-blur-sm bg-[#000010]/30 z-0"
       onClick={ onClick }
     >
       <div className="absolute inset-0 w-full h-full rounded-full opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/20 to-black/0 transition-all duration-1000" />
