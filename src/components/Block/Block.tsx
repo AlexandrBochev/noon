@@ -3,7 +3,7 @@ import { titleItems } from "../../data/data"
 import { MEET_MOTION4 } from "../../library/constants"
 import { BlockItem1 } from "../BlockItem1/BlockItem1"
 import { BlockItem2 } from "../BlockItem2/BlockItem2"
-import { BlockItem3 } from "../BlockItem3 copy/BlockItem3"
+import { BlockItem3 } from "../BlockItem3/BlockItem3"
 import { Title } from "../Title/Title"
 import { motion as m } from "framer-motion"
 
@@ -12,16 +12,19 @@ interface BlockProps {
   img: string
   changeOrder?: boolean
   blockItems?: number
+  setCursorVariant: (value: string) => void
 }
 
-const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
+const Block = ({ titleIndex, img, changeOrder, blockItems, setCursorVariant }: BlockProps) => {
   return (
-    <m.section
-      { ...MEET_MOTION4 }
-      transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
-      className="container mb-8 lg:mb-24 mx-auto"
-    >
-      <div className="relative rounded-[1.875rem] border border-[#6A2D00]/30 overflow-hidden">
+    <section className="relative container mb-8 lg:mb-24 mx-auto overflow-hidden">
+      <m.div
+        { ...MEET_MOTION4 }
+        transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
+        onMouseEnter={ () => setCursorVariant('block') }
+        onMouseLeave={ () => setCursorVariant('default') }
+        className="relative rounded-[1.875rem] border border-[#6A2D00]/30 overflow-hidden"
+      >
         <img src={ blockBG } alt="Block" className="absolute top-0 left-0 w-full h-full -z-10 object-cover" />
 
         <div className="relative w-full flex flex-col lg:flex-row items-start lg:items-center justify-between p-5 lg:p-12">
@@ -41,8 +44,8 @@ const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
             <Title props={ titleItems[titleIndex] } />
           </div>
         </div>
-      </div>
-    </m.section>
+      </m.div>
+    </section>
   )
 }
 

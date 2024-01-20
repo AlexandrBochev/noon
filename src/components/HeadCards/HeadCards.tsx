@@ -5,7 +5,11 @@ import { HeadCard } from "../HeadCard/HeadCard"
 import SliderCards from "../SliderCards/SliderCards"
 import { motion as m } from "framer-motion"
 
-const HeadCards = () => {
+interface HeadCardsProps {
+  setCursorVariant: (value: string) => void
+}
+
+const HeadCards = ({ setCursorVariant }: HeadCardsProps) => {
   return (
     <m.section
       { ...CARDS }
@@ -14,7 +18,7 @@ const HeadCards = () => {
       <SliderCards amount={ 4 }>
         {headCards.map((headCard: IHeadCard) =>
           <div key={ headCard.id } className="ml-6">
-            <HeadCard props={ headCard } />
+            <HeadCard headCard={headCard} setCursorVariant={setCursorVariant} />
           </div>
         )}
       </SliderCards>

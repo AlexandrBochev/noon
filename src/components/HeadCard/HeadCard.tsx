@@ -2,11 +2,26 @@ import { IHeadCard } from "../../library/types"
 import bg from "../../assets/images/women/women-bg.png"
 import btnBg from "../../assets/images/btn/btn-bg.png"
 
-const HeadCard = ({ props }: { props: IHeadCard }) => {
-  const { name, position, img } = props
+interface HeadCardProps {
+  headCard: IHeadCard
+  setCursorVariant: (value: string) => void
+}
+
+const HeadCard = ({ headCard, setCursorVariant }: HeadCardProps) => {
+  const { name, position, img } = headCard
 
   return (
-    <div className="relative w-105 h-43 flex flex-col items-start justify-center rounded-[20px] overflow-hidden">
+    <div
+      onMouseEnter={ () => setCursorVariant('block') }
+      onMouseLeave={ () => setCursorVariant('default') }
+      className="
+        relative w-105 h-43 flex flex-col items-start justify-center rounded-[20px] overflow-hidden
+        border border-transparent
+        before:bg-gradient-to-b before:from-[#6B411F] before:to-[#6B411F]/20
+        before:border-inherit before:border before:rounded-[20px]
+        before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
+      "
+    >
       <img src={ bg } alt="Background" className="absolute top-0 left-0 w-full h-full -z-10" />
 
       <img src={ img } alt={ name } className="absolute bottom-0 left-4" />

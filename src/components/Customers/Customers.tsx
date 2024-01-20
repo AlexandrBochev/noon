@@ -4,7 +4,11 @@ import { motion as m } from "framer-motion"
 import { Player } from "@lottiefiles/react-lottie-player"
 import lottielineCustomers from '../../library/lottie/lottie line Customers 2.json'
 
-const Customers = () => {
+interface CustomersProps {
+  setCursorVariant: (value: string) => void
+}
+
+const Customers = ({ setCursorVariant }: CustomersProps) => {
   return (
     <section className="container mb-18 lg:mb-20 mt-25 lg:mt-30 mx-auto Customers" id="Customers">
       <div className="w-full max-w-67 2xl:max-w-105 mb-9 lg:mb-14 mx-auto">
@@ -12,10 +16,12 @@ const Customers = () => {
       </div>
 
       <div
+        onMouseEnter={ () => setCursorVariant('block') }
+        onMouseLeave={ () => setCursorVariant('default') }
         className="
           relative w-full h-full flex flex-col items-center justify-center px-4 pt-32 pb-24 overflow-hidden
           border border-transparent rounded-[1.25rem] lg:rounded-[1.875rem]
-          before:bg-gradient-to-tr before:from-[#4F4F4F] before:via-black before:to-[#4F4F4F]
+          before:bg-gradient-to-tr before:from-[#4F4F4F] before:via-[#4F4F4F]/20 before:to-[#4F4F4F]
           before:border-inherit before:border before:rounded-[1.25rem] before:lg:rounded-[1.875rem]
           before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
         "

@@ -4,13 +4,17 @@ import { Title } from "../Title/Title"
 import crosses from "../../assets/images/meet/crosses.png"
 import { FONT_STYLES_GOLD_HOVER, FONT_STYLES_SILVER, MEET_MOTION, MEET_MOTION4, MEET_MOTION5 } from "../../library/constants"
 import percent from "../../assets/images/meet/percent.png"
-import bg from "../../assets/images/meet/bg2.svg"
+import bg from "../../assets/images/meet/bg.png"
 import buttons from "../../assets/images/meet/buttons.png"
 import circle from "../../assets/images/meet/circle.png"
 import { motion as m } from "framer-motion"
 import { useState } from "react"
 
-const Meet = () => {
+interface MeetProps {
+  setCursorVariant: (value: string) => void
+}
+
+const Meet = ({ setCursorVariant }: MeetProps) => {
   const [hover, setHover] = useState(false)
 
   const motion1 = {
@@ -25,6 +29,16 @@ const Meet = () => {
     transition: { duration: 0.8, ease: 'easeInOut' },
   }
 
+  const handleEnter = () => {
+    setCursorVariant('block')
+    setHover(true)
+  }
+
+  const handleLive = () => {
+    setCursorVariant('default')
+    setHover(false)
+  }
+
   return (
     <section className="container mx-auto overflow-hidden About" id="About">
       <div className="mb-20">
@@ -32,12 +46,19 @@ const Meet = () => {
       </div>
 
       <div className="w-full flex flex-col lg:flex-row items-center justify-center">
-        <div
-          className="relative max-w-154 flex items-center justify-center overflow-hidden"
-          onMouseEnter={ () => setHover(true) }
-          onMouseLeave={ () => setHover(false) }
+        <m.div
+          { ...MEET_MOTION }
+          className="
+            relative max-w-154 flex items-center justify-center overflow-hidden rounded-[20px] md:rounded-[30px]
+            border border-transparent
+            before:bg-gradient-to-b before:from-[#51425E]/70 before:to-[#51425E]/20
+            before:border-inherit before:border before:rounded-[20px] before:md:rounded-[30px]
+            before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
+          "
+          onMouseEnter={ handleEnter }
+          onMouseLeave={ handleLive }
         >
-          <m.img src={ bg } alt="Background" { ...MEET_MOTION } />
+          <img src={ bg } alt="Background" className="w-full h-full object-cover" />
 
           <m.img
             src={ buttons } alt="Buttons"
@@ -50,7 +71,7 @@ const Meet = () => {
             { ...motion1 }
             className="absolute w-[80%] top-0"
           />
-        </div>
+        </m.div>
 
         <div className="w-15 h-24" />
 
