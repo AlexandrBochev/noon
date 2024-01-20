@@ -4,7 +4,7 @@ import { BLOCK_ITEM_1 } from '../../library/constants'
 
 const BlockItem1 = () => {
   return (
-    <div className="absolute inset-0 w-full h-full">
+    <div className="absolute inset-0 w-full h-full overflow-hidden">
       <m.img
         { ...BLOCK_ITEM_1 }
         src={ item1 } alt="Block Item 1"

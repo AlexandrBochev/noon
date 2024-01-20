@@ -25,7 +25,7 @@ const Block = ({ titleIndex, img, changeOrder, blockItems, setCursorVariant }: B
         onMouseLeave={ () => setCursorVariant('default') }
         className="relative rounded-[1.875rem] border border-[#6A2D00]/30 overflow-hidden"
       >
-        <img src={ blockBG } alt="Block" className="absolute top-0 left-0 w-full h-full -z-10 object-cover" />
+        <img src={ blockBG } alt="Block" className="absolute top-0 left-0 w-full h-full rounded-[1.875rem] -z-10 object-cover" />
 
         <div className="relative w-full flex flex-col lg:flex-row items-start lg:items-center justify-between p-5 lg:p-12">
           <div className={`${ changeOrder ? 'lg:order-2 lg:ml-12' : 'lg:mr-12'} relative flex justify-start mb-12.5 lg:mb-0`}>
