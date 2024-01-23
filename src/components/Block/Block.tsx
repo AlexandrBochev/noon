@@ -23,7 +23,7 @@ const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
         transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
         className="relative rounded-[1.875rem] border border-[#6A2D00]/30 overflow-hidden"
       >
-        <MouseFollowLight />
+        <div><MouseFollowLight /></div>
         <img
           src={blockBG}
           alt="Block"
@@ -48,7 +48,7 @@ const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
             {blockItems === 3 && <BlockItem3 />}
           </div>
 
-          <div className="max-w-64 xl:max-w-105">
+          <div className="max-w-64 xl:max-w-105 z-50">
             <Title props={titleItems[titleIndex]} />
           </div>
         </div>

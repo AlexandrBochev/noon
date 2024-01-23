@@ -15,7 +15,7 @@ const Partners = () => {
       >
         <SliderCards amount={ 4 }>
           {partners.map((partner: IPartner) =>
-            <div key={ partner.id } className="ml-5.5">
+            <div key={ partner.id } className="ml-5.5 z-50">
               <PartnerCard props={ partner } />
             </div>
           )}

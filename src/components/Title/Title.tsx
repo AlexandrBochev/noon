@@ -7,7 +7,7 @@ const Title = ({ props }: { props: TitleProps }) => {
   const { title, span1, span2, description, center, btn } = props
 
   return (
-    <section className={`${ center ? 'text-center' : 'text-left' } text-balance text-[2.25rem] 2xl:text-[3.625rem] mx-auto`}>
+    <section className={`${ center ? 'text-center' : 'text-left' } text-balance text-[2.25rem] 2xl:text-[3.625rem] mx-auto z-50`}>
       <h2 className="mb-6">
         {title.map((word, i) =>
           <m.span

@@ -21,7 +21,7 @@ const Header = () => {
         transition-all duration-700 z-20
       `}
     />
-    <header className={`${isMenuOpen ? 'fixed h-screen' : 'absolute'} left-[50%] translate-x-[-50%] container flex items-start justify-between py-6.5 z-20 mx-auto`}>
+    <header className={`${isMenuOpen ? 'fixed h-screen' : 'absolute'} left-[50%] translate-x-[-50%] container flex items-start justify-between py-6.5 z-50 mx-auto`}>
       <a href="/" className="flex items-center mt-2 z-50">
         <m.img
           initial={{ opacity: 0, scale: 0.5, rotate: -90 }}

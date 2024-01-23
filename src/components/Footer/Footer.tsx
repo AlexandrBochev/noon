@@ -3,19 +3,19 @@ import logo from '../../assets/images/logo-noon.png'
 
 const Footer = () => {
   return (
-    <footer className="relative flex flex-col items-center justify-center pt-57.5 lg:pt-85 pb-12.5 lg:pb-35 mx-auto overflow-hidden">
+    <footer className="relative flex flex-col items-center justify-center pt-57.5 lg:pt-85 pb-12.5 lg:pb-35 mx-auto z-40 overflow-hidden">
       <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4,duration: 1, ease: "easeInOut", }}
-        className="container w-full flex justify-around text-xs text-white font-light mb-15 lg:hidden"
+        className="container w-full flex justify-around text-xs text-white font-light mb-15 lg:hidden z-40"
       >
         <a href="#">Blog</a>
         <a href="#">Terms and Conditions</a>
         <a href="#">Privacy Policy</a>
       </m.div>
 
-      <div className="relative container max-w-256 flex items-center justify-between mb-3 lg:mb-6.5">
+      <div className="relative container max-w-256 flex items-center justify-between mb-3 lg:mb-6.5 z-40">
         <a href="/" className="flex items-center">
           <m.img
             initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
