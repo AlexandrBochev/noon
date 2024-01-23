@@ -17,17 +17,23 @@ import { gsap } from 'gsap'
 import { motion as m } from "framer-motion"
 import MouseFollower from "mouse-follower"
 
-MouseFollower.registerGSAP(gsap);
+MouseFollower.registerGSAP(gsap)
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
-
-// const cursor = new MouseFollower({
-//   container: '.mf-container',
-//   speed: 0.3
-// })
 
 export default function App() {
   const[mousePosition, setMousePosition] = useState({x: 0, y: 0})
   const [cursorVariant, setCursorVariant] = useState('default')
+
+  useEffect(() => {
+    const cursor = new MouseFollower({
+      container: '.mf-container',
+      speed: 0.3,
+    })
+
+    console.log(cursor)
+
+    return () => cursor.destroy()
+  }, [])
 
   useEffect(() => {
     const mouseMove = (e: any) => setMousePosition({x: e.clientX, y: e.clientY})
@@ -65,15 +71,16 @@ export default function App() {
     <>
       {/* Cursor */}
       <m.div
-        className="fixed top-0 left-0 w-125 h-125 rounded-full pointer-events-none z-50"
+        className="fixed top-0 left-0 w-125 h-125 rounded-full pointer-events-none fm-cursor z-50"
         variants={ variants }
         animate={ cursorVariant }
       />
-      <div id="smooth-wrapper" className="relative w-full h-full mf-container overflow-hidden">
+      <div id="smooth-wrapper" className="relative w-full h-full overflow-hidden">
         <div id="smooth-content">
           <Header />
           <main>
             <Intro />
+            <div className="container h-52 bg-slate-500 mf-container" />
             <TickerLogos />
             <HeadCards setCursorVariant={ setCursorVariant } />
             <Meet setCursorVariant={ setCursorVariant } />
