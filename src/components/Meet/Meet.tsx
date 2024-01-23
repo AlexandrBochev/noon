@@ -40,14 +40,6 @@ const Meet = () => {
     transition: { duration: 0.8, ease: "easeInOut" },
   };
 
-  const handleEnter = () => {
-    setHover(true);
-  };
-
-  const handleLive = () => {
-    setHover(false);
-  };
-
   return (
     <section className="container mx-auto overflow-hidden About" id="About">
       <div className="mb-20">
@@ -64,10 +56,10 @@ const Meet = () => {
             before:border-inherit before:border before:rounded-[20px] before:md:rounded-[30px]
             before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
           "
-          onMouseEnter={ handleEnter }
-          onMouseLeave={ handleLive }
+          onMouseEnter={ () => setHover(true) }
+          onMouseLeave={ () => setHover(false) }
         >
-          <MouseFollowLight />
+          <div><MouseFollowLight /></div>
           <img
             src={bg}
             alt="Background"

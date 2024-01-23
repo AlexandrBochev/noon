@@ -15,7 +15,9 @@ const PartnerCard = ({ props }: { props: IPartner }) => {
         before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
       "
     >
-      <MouseFollowLight />
+      <div>
+        <MouseFollowLight />
+      </div>
       <img src={ partnersBG } alt="Background" className="absolute top-0 left-0 w-full h-full -z-10" />
       <img src={ logo } alt="Logo" />
       <p className="text-[1.375rem] mt-5 mb-4">{ name }</p>

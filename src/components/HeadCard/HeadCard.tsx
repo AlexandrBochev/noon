@@ -16,7 +16,7 @@ const HeadCard = ({ headCard }: { headCard: IHeadCard }) => {
         before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
       "
     >
-      <MouseFollowLight />
+      <div><MouseFollowLight /></div>
       <img
         src={bg}
         alt="Background"

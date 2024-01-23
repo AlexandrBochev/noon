@@ -21,8 +21,6 @@ const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
       <m.div
         {...MEET_MOTION4}
         transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
-        // onMouseEnter={() => setCursorVariant("block")}
-        // onMouseLeave={() => setCursorVariant("default")}
         className="relative rounded-[1.875rem] border border-[#6A2D00]/30 overflow-hidden"
       >
         <MouseFollowLight />

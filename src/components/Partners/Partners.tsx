@@ -11,11 +11,11 @@ const Partners = () => {
     <section className="pt-12 pb-12 lg:pt-20 lg:pb-9">
       <m.div
         { ...CARDS }
-        className="w-[86rem] mb-10 mx-auto overflow-hidden"
+        className="w-[88rem] mb-10 mx-auto overflow-hidden"
       >
         <SliderCards amount={ 4 }>
           {partners.map((partner: IPartner) =>
-            <div key={ partner.id } className="ml-7.5">
+            <div key={ partner.id } className="ml-5.5">
               <PartnerCard props={ partner } />
             </div>
           )}

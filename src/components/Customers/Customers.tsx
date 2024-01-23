@@ -21,7 +21,7 @@ const Customers = () => {
           before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
         "
       >
-        <MouseFollowLight />
+        <div><MouseFollowLight /></div>
         <m.div
           initial={{ opacity: 0.1, }}
           whileInView={{ opacity: 1, }}

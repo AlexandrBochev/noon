@@ -37,7 +37,7 @@ const Workforce = () => {
           onMouseEnter={ () => setHover1(true) }
           onMouseLeave={ () => setHover1(false) }
         >
-          <MouseFollowLight />
+          <div><MouseFollowLight /></div>
           <img src={ workforceBlock1 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -93,7 +93,7 @@ const Workforce = () => {
           onMouseEnter={ () => setHover2(true) }
           onMouseLeave={ () => setHover2(false) }
         >
-          <MouseFollowLight />
+          <div><MouseFollowLight /></div>
           <img src={ workforceBlock2 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">

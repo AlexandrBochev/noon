@@ -35,7 +35,6 @@ export default function App() {
         content: "#smooth-content",
         smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
         onUpdate(self) {
-          // console.log(self);
           if (self?.scrollTrigger?.end && self?.scrollTrigger?.progress) {
             setPosY(self.scrollTrigger.end * self.scrollTrigger.progress);
           }
