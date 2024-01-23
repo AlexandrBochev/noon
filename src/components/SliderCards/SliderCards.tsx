@@ -15,10 +15,12 @@ const SliderCards = ({ children, amount }: SliderCardsProps) => {
     pauseOnHover: true,
     arrows: false,
     touchThreshold: 50,
+    // draggable:false,
+    // touchMove: false,
   }
 
   return (
-    <div className="">
+    <div>
       <Slider { ...settings }>
         { children }
       </Slider>

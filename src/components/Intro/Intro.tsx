@@ -19,6 +19,19 @@ const TitleMotion = {
   transition: { repeat: Infinity, duration: 6 },
 }
 
+const TitleMotion2 = {
+  animate: {
+    filter: "blur(30px)",
+    scaleY: 1.2,
+    backgroundImage: [
+    'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0.01%, rgba(255, 255, 255, 1) 0.01%, rgba(255, 255, 255, 0.00) 40%)',
+    'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 60%, rgba(255, 255, 255, 1) 99.99%, rgba(255, 255, 255, 0.00) 100%)',
+    'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 60%, rgba(255, 255, 255, 0) 99.99%, rgba(255, 255, 255, 0.00) 100%)',
+    ],
+  },
+  transition: { delay: 1.4, duration: 6 },
+}
+
 const Intro = () => {
   return (
     <section className="relative w-full h-svh mb-24 lg:mb-35 overflow-hidden">
@@ -33,7 +46,20 @@ const Intro = () => {
       <div className="relative container h-svh flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
         <div className="relative flex flex-col items-center justify-center">
           <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.6 }}>
-            <m.div className="flex mb-4 bg-clip-text text-transparent" { ...TitleMotion }>
+            <m.div className="absolute inset-0 flex mb-4 bg-clip-text text-transparent z-0" { ...TitleMotion2 }>
+              {noon.map((item: INoon) =>
+                <m.span
+                  key={item.id}
+                  className="text-[6.625rem] lg:text-[11.25rem] leading-none"
+                >
+                  {item.title}
+                </m.span>
+              )}
+            </m.div>
+          </m.div>
+
+          <m.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1, duration: 0.6 }}>
+            <m.div className="flex mb-4 bg-clip-text text-transparent z-20" { ...TitleMotion }>
               {noon.map((item: INoon) =>
                 <m.span
                   key={item.id}

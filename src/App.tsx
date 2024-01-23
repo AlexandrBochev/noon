@@ -15,8 +15,15 @@ import { Footer } from './components/Footer/Footer'
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { motion as m } from "framer-motion"
+import MouseFollower from "mouse-follower"
 
+MouseFollower.registerGSAP(gsap);
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
+
+// const cursor = new MouseFollower({
+//   container: '.mf-container',
+//   speed: 0.3
+// })
 
 export default function App() {
   const[mousePosition, setMousePosition] = useState({x: 0, y: 0})
@@ -62,7 +69,7 @@ export default function App() {
         variants={ variants }
         animate={ cursorVariant }
       />
-      <div id="smooth-wrapper" className="relative w-full h-full overflow-hidden">
+      <div id="smooth-wrapper" className="relative w-full h-full mf-container overflow-hidden">
         <div id="smooth-content">
           <Header />
           <main>
