@@ -10,34 +10,11 @@ import { motion as m } from "framer-motion"
 import { Player } from "@lottiefiles/react-lottie-player"
 import lottieSlideGrid from '../../library/lottie/lottie slide grid.json'
 import { useState } from "react"
+import { MouseFollowLight } from "../mouse-follow-light"
 
-interface WorkforceProps {
-  setCursorVariant: (value: string) => void
-}
-
-const Workforce = ({ setCursorVariant }: WorkforceProps) => {
+const Workforce = () => {
   const [hover1, setHover1] = useState(false)
   const [hover2, setHover2] = useState(false)
-
-  const handleEnter1 = () => {
-    setCursorVariant('block')
-    setHover1(true)
-  }
-
-  const handleLive1 = () => {
-    setCursorVariant('default')
-    setHover1(false)
-  }
-
-  const handleEnter2 = () => {
-    setCursorVariant('block')
-    setHover2(true)
-  }
-
-  const handleLive2 = () => {
-    setCursorVariant('default')
-    setHover2(false)
-  }
 
   return (
     <section className="container flex flex-col items-center justify-center mx-auto Articles" id="Articles">
@@ -57,9 +34,10 @@ const Workforce = ({ setCursorVariant }: WorkforceProps) => {
       <div className="w-full flex flex-col lg:flex-row items-center justify-between">
         <m.div
           className={`relative lg:mr-5 ${CARD_GRADIENT}`} { ...MEET_MOTION }
-          onMouseEnter={ handleEnter1 }
-          onMouseLeave={ handleLive1 }
+          onMouseEnter={ () => setHover1(true) }
+          onMouseLeave={ () => setHover1(false) }
         >
+          <MouseFollowLight />
           <img src={ workforceBlock1 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -112,9 +90,10 @@ const Workforce = ({ setCursorVariant }: WorkforceProps) => {
 
         <m.div
           className={`relative ${CARD_GRADIENT}`} { ...MEET_MOTION }
-          onMouseEnter={ handleEnter2 }
-          onMouseLeave={ handleLive2 }
+          onMouseEnter={ () => setHover2(true) }
+          onMouseLeave={ () => setHover2(false) }
         >
+          <MouseFollowLight />
           <img src={ workforceBlock2 } alt="Workforce Block 1" className="absolute inset-0 w-full h-full -z-10 object-cover" />
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">

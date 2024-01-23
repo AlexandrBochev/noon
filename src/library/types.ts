@@ -24,7 +24,6 @@ export interface IHeadCard {
   name: string
   position: string
   img: string
-  setCursorVariant?: (value: string) => void
 }
 
 export interface SliderCardsProps {

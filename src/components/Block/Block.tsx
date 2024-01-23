@@ -13,16 +13,9 @@ interface BlockProps {
   img: string;
   changeOrder?: boolean;
   blockItems?: number;
-  setCursorVariant: (value: string) => void;
 }
 
-const Block = ({
-  titleIndex,
-  img,
-  changeOrder,
-  blockItems,
-  setCursorVariant,
-}: BlockProps) => {
+const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
   return (
     <section className="relative container mb-8 lg:mb-24 mx-auto overflow-hidden">
       <m.div

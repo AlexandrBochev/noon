@@ -16,7 +16,7 @@ export const MouseFollowLight: FC<IMouseFollowLight> = ({}) => {
     let rootPos = refRoot.current?.getBoundingClientRect();
     if (parent && rootPos) {
       let parentPos = parent?.getBoundingClientRect();
-      let window = document.documentElement.getBoundingClientRect();
+      // let window = document.documentElement.getBoundingClientRect();
       // console.log(window.y);
 
       // let blockPosY = mousePosition.y - parentPos.y - parentPos.height / 2;
@@ -24,10 +24,6 @@ export const MouseFollowLight: FC<IMouseFollowLight> = ({}) => {
 
       let blockPosY = mousePosition.y - parentPos.y - rootPos?.height / 2;
       let blockPosX = mousePosition.x - parentPos.x - rootPos?.width / 2;
-
-      // console.log(blockPos, window.y, parentPos.y);
-
-      console.log(mousePosition.x);
 
       gsap.set(refRoot.current, {
         // y: posY + mousePosition.y,

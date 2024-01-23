@@ -17,11 +17,7 @@ import { motion as m } from "framer-motion";
 import { useState } from "react";
 import { MouseFollowLight } from "../mouse-follow-light";
 
-interface MeetProps {
-  setCursorVariant: (value: string) => void;
-}
-
-const Meet = ({ setCursorVariant }: MeetProps) => {
+const Meet = () => {
   const [hover, setHover] = useState(false);
 
   const motion1 = {
@@ -45,12 +41,10 @@ const Meet = ({ setCursorVariant }: MeetProps) => {
   };
 
   const handleEnter = () => {
-    setCursorVariant("block");
     setHover(true);
   };
 
   const handleLive = () => {
-    setCursorVariant("default");
     setHover(false);
   };
 
@@ -70,8 +64,8 @@ const Meet = ({ setCursorVariant }: MeetProps) => {
             before:border-inherit before:border before:rounded-[20px] before:md:rounded-[30px]
             before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
           "
-          // onMouseEnter={ handleEnter }
-          // onMouseLeave={ handleLive }
+          onMouseEnter={ handleEnter }
+          onMouseLeave={ handleLive }
         >
           <MouseFollowLight />
           <img

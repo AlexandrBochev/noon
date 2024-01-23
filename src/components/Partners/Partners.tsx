@@ -6,11 +6,7 @@ import { IPartner } from "../../library/types"
 import { CARDS } from "../../library/constants"
 import { Button } from "../Button/Button"
 
-interface PartnersProps {
-  setCursorVariant: (value: string) => void
-}
-
-const Partners = ({ setCursorVariant }: PartnersProps) => {
+const Partners = () => {
   return (
     <section className="pt-12 pb-12 lg:pt-20 lg:pb-9">
       <m.div
@@ -20,7 +16,7 @@ const Partners = ({ setCursorVariant }: PartnersProps) => {
         <SliderCards amount={ 4 }>
           {partners.map((partner: IPartner) =>
             <div key={ partner.id } className="ml-7.5">
-              <PartnerCard props={ partner } setCursorVariant={ setCursorVariant } />
+              <PartnerCard props={ partner } />
             </div>
           )}
         </SliderCards>

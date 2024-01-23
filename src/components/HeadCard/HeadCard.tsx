@@ -3,18 +3,11 @@ import bg from "../../assets/images/women/women-bg.png";
 import btnBg from "../../assets/images/btn/btn-bg.png";
 import { MouseFollowLight } from "../mouse-follow-light";
 
-interface HeadCardProps {
-  headCard: IHeadCard;
-  setCursorVariant: (value: string) => void;
-}
-
-const HeadCard = ({ headCard, setCursorVariant }: HeadCardProps) => {
+const HeadCard = ({ headCard }: { headCard: IHeadCard }) => {
   const { name, position, img } = headCard;
 
   return (
     <div
-      // onMouseEnter={() => setCursorVariant("block")}
-      // onMouseLeave={() => setCursorVariant("default")}
       className="
         relative w-105 h-43 flex flex-col items-start justify-center rounded-[20px] overflow-hidden
         border border-transparent
