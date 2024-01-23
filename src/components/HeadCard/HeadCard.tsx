@@ -1,19 +1,20 @@
-import { IHeadCard } from "../../library/types"
-import bg from "../../assets/images/women/women-bg.png"
-import btnBg from "../../assets/images/btn/btn-bg.png"
+import { IHeadCard } from "../../library/types";
+import bg from "../../assets/images/women/women-bg.png";
+import btnBg from "../../assets/images/btn/btn-bg.png";
+import { MouseFollowLight } from "../mouse-follow-light";
 
 interface HeadCardProps {
-  headCard: IHeadCard
-  setCursorVariant: (value: string) => void
+  headCard: IHeadCard;
+  setCursorVariant: (value: string) => void;
 }
 
 const HeadCard = ({ headCard, setCursorVariant }: HeadCardProps) => {
-  const { name, position, img } = headCard
+  const { name, position, img } = headCard;
 
   return (
     <div
-      onMouseEnter={ () => setCursorVariant('block') }
-      onMouseLeave={ () => setCursorVariant('default') }
+      // onMouseEnter={() => setCursorVariant("block")}
+      // onMouseLeave={() => setCursorVariant("default")}
       className="
         relative w-105 h-43 flex flex-col items-start justify-center rounded-[20px] overflow-hidden
         border border-transparent
@@ -22,9 +23,14 @@ const HeadCard = ({ headCard, setCursorVariant }: HeadCardProps) => {
         before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
       "
     >
-      <img src={ bg } alt="Background" className="absolute top-0 left-0 w-full h-full -z-10" />
+      <MouseFollowLight />
+      <img
+        src={bg}
+        alt="Background"
+        className="absolute top-0 left-0 w-full h-full -z-10"
+      />
 
-      <img src={ img } alt={ name } className="absolute bottom-0 left-4" />
+      <img src={img} alt={name} className="absolute bottom-0 left-4" />
 
       <div
         className="
@@ -35,16 +41,20 @@ const HeadCard = ({ headCard, setCursorVariant }: HeadCardProps) => {
           before:absolute before:inset-0 before:z-10 before:bg-origin-border before:[mask-composite:exclude] gradient
         "
       >
-        <img src={ btnBg } alt="Background" className="absolute inset-0 w-full h-full rounded-full" />
-        <p className="z-50">{ position }</p>
+        <img
+          src={btnBg}
+          alt="Background"
+          className="absolute inset-0 w-full h-full rounded-full"
+        />
+        <p className="z-50">{position}</p>
       </div>
 
       <div className="ml-42 z-50">
-        <p className="text-[1.375rem] mb-2">{ name }</p>
+        <p className="text-[1.375rem] mb-2">{name}</p>
         <p className="font-light text-[#54565B]">Head of Talent</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export { HeadCard }
+export { HeadCard };
