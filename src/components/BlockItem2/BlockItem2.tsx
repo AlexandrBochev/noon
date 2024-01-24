@@ -10,7 +10,7 @@ const BlockItem2 = () => {
           { ...BLOCK_ITEM_2 }
           transition={{ delay: (1 + item.id) * 0.2, duration: 0.8, ease: "easeInOut" }}
           key={ item.id }
-          className={`flex mb-[2.4%] w-full ${item.id % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+          className={`flex mb-[2.4%] w-full ${item.id % 2 === 0 ? 'justify-start' : 'justify-end'} z-40`}
         >
           <img
             src={ item.img } alt="Block Item 2"
