@@ -32,9 +32,7 @@ const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
 
         <div className="relative w-full flex flex-col lg:flex-row items-start lg:items-center justify-between p-5 lg:p-12">
           <div
-            className={`${
-              changeOrder ? "lg:order-2 lg:ml-12" : "lg:mr-12"
-            } relative flex justify-start mb-12.5 lg:mb-0`}
+            className={`${ changeOrder ? "lg:order-2 lg:ml-12" : "lg:mr-12" } relative flex justify-start mb-12.5 lg:mb-0`}
           >
             <m.img
               src={img}
