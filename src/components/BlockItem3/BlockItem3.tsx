@@ -221,12 +221,18 @@ const BlockItem3 = () => {
           className="w-full"
         />
 
-        <img
+        <m.img
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ delay: 1.6, duration: 0.8 }}
           src={ btn2 } alt="Button"
-          className="absolute w-[10.36%] cursor-pointer z-40 bottom-[-22%] left-0 hover:scale-105 active:scale-95 transition-all duration-300"
+          className="absolute w-[10.36%] cursor-pointer z-40 bottom-[-22%] left-0 hover:scale-110 active:scale-95 transition-all duration-300"
         />
 
-        <div
+        <m.div
+          initial={{ opacity: 0, }}
+          whileInView={{ opacity: 1, }}
+          transition={{ delay: 1.8, duration: 0.8 }}
           className="
             absolute bottom-[-22.4%] left-[11.8%] w-[4.7%] h-[8%]
             bg-gradient-to-b from-[#352B25] to-[#171310]/0
@@ -234,15 +240,20 @@ const BlockItem3 = () => {
           "
         >
           <img src={ light } alt="light" className="group-hover:scale-110" />
-        </div>
+        </m.div>
 
         <div className="absolute bottom-[31.4%] right-[38.6%] cursor-pointer z-40">
           <img src={ btn } alt="Button" className="w-[90%] md:w-full hover:scale-125 active:scale-95 z-40  transition-all duration-300" />
         </div>
 
-        <div className="absolute bottom-[-19.4%] right-[-2%] cursor-pointer z-40">
+        <m.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.8, duration: 0.8 }}
+          className="absolute bottom-[-19.4%] right-[-2%] cursor-pointer z-40"
+        >
           <img src={ circle2 } alt="Circle 2" className="w-[96%] hover:scale-125 active:scale-95 z-40  transition-all duration-300" />
-        </div>
+        </m.div>
       </m.div>
     </m.div>
   )
