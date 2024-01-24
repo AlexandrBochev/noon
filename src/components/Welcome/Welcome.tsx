@@ -15,7 +15,7 @@ const Welcome = () => {
         whileInView={{ opacity: [0, 1, 0], x: -2000, y: 1500, }}
         transition={{ delay: 2, duration: 4 }}
         src={ comet } alt="Comet"
-        className="absolute top-0 right-0 -z-50"
+        className="absolute top-40 md:top-0 right-0 -z-50"
       />
 
       <m.img
@@ -23,7 +23,7 @@ const Welcome = () => {
         whileInView={{ opacity: [0, 1, 0], x: 2000, y: 300, }}
         transition={{ delay: 5, duration: 2 }}
         src={ comet2 } alt="Comet"
-        className="absolute top-0 left-0 -z-50"
+        className="absolute top-60 md:top-0 left-0 -z-50"
       />
 
       <Player
