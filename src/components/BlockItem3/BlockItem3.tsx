@@ -19,6 +19,9 @@ import phone from '../../assets/images/block/block-3/phone.svg'
 import light from '../../assets/images/block/block-3/light.svg'
 import btn from '../../assets/images/block/block-3/btn.png'
 import btn2 from '../../assets/images/block/block-3/btn2.png'
+import text1 from '../../assets/images/block/block-3/text-1.svg'
+import text2 from '../../assets/images/block/block-3/text-2.svg'
+import text3 from '../../assets/images/block/block-3/text-3.svg'
 import { motion as m } from "framer-motion"
 import { BLOCK_ITEM_3 } from '../../library/constants'
 import { Button2 } from '../Button2/Button2'
@@ -89,6 +92,33 @@ const BlockItem3 = () => {
           src={ item2 } alt="Block Item 2"
           className="absolute bottom-0 right-[9.8%] w-[24.4%] hover:scale-[102%] active:scale-95 z-40 cursor-pointer transition-all
           duration-300"
+        />
+
+        <img
+          src={text1} alt="Text"
+          className="
+            absolute top-[31%] left-[6.2%] w-[55%]
+            hover:scale-105 active:scale-95
+            cursor-pointer transition-all duration-300 z-40
+          "
+        />
+
+        <img
+          src={text2} alt="Text"
+          className="
+            absolute top-[41.4%] left-[6.2%] w-[55%]
+            hover:scale-105 active:scale-95
+            cursor-pointer transition-all duration-300 z-40
+          "
+        />
+
+        <img
+          src={text3} alt="Text"
+          className="
+            absolute top-[52.4%] left-[6.2%] w-[55%]
+            hover:scale-105 active:scale-95
+            cursor-pointer transition-all duration-300 z-40
+          "
         />
 
         <div
