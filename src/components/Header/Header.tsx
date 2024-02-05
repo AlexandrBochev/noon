@@ -7,7 +7,7 @@ import { FONT_STYLES_SILVER } from '../../library/constants'
 import { INavigation } from "../../library/types"
 import { useState } from "react"
 import { Button } from "../Button/Button"
-// import { scrollDownToSection } from "../../library/Functions"
+import { scrollDownToSection } from "../../library/Functions"
 import { Link } from "react-router-dom"
 
 const Header = () => {
@@ -61,7 +61,7 @@ const Header = () => {
             >
               <Link to={ item.link }
                 className={`${FONT_STYLES_SILVER} hover:text-white cursor-pointer transition-all duration-500`}
-                // onClick={ () => scrollDownToSection(item.title) }
+                onClick={ () => scrollDownToSection(item.title) }
               >
                 { item.title }
               </Link>

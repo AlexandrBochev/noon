@@ -42,10 +42,10 @@ export default function App() {
         <div id="smooth-content">
           <Header />
           <Routes>
-            <Route path="/" element={ <Home /> }/>
-            <Route path="/blog" element={ <Blog /> }/>
-            <Route path="/blog/:_id" element={ <BlogContent /> }/>
-            <Route path="/terms-of-use" element={ <TermsOfUse /> }/>
+            <Route path="/" element={ <Home /> } />
+            <Route path="/blog" element={ <Blog /> } />
+            <Route path="/blog/:_id" element={ <BlogContent /> } />
+            <Route path="/terms-of-use" element={ <TermsOfUse /> } />
           </Routes>
           <Footer />
         </div>

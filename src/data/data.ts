@@ -34,11 +34,11 @@ import blogImg6 from '../assets/images/blog/blog-img-6.jpg'
 
 
 export const navigation = [
-  { id: 1, title: 'About', link: '#' },
-  { id: 2, title: 'Service', link: '#' },
-  { id: 3, title: 'Customers', link: '#' },
-  { id: 4, title: 'Articles', link: '#' },
-  { id: 4, title: 'Blog', link: '/blog' },
+  { id: 1, title: 'About', link: '/' },
+  { id: 2, title: 'Service', link: '/' },
+  { id: 3, title: 'Customers', link: '/' },
+  { id: 4, title: 'Articles', link: '/' },
+  { id: 5, title: 'Blog', link: '/blog' },
 ]
 
 export const noon = [

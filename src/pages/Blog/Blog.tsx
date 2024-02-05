@@ -6,7 +6,7 @@ import { Button } from "../../components/Button/Button"
 
 const Blog = () => {
   return (
-    <main>
+    <main id="Blog">
       <section>
         <BlogIntro />
       </section>
