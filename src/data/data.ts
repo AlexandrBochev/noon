@@ -25,13 +25,20 @@ import block2btn2 from '../assets/images/workforce/block-2/btn-2.png'
 import block2btn3 from '../assets/images/workforce/block-2/btn-3.png'
 import block2btn4 from '../assets/images/workforce/block-2/btn-4.png'
 import block2btn5 from '../assets/images/workforce/block-2/btn-5.png'
+import blogImg1 from '../assets/images/blog/blog-img-1.jpg'
+import blogImg2 from '../assets/images/blog/blog-img-2.jpg'
+import blogImg3 from '../assets/images/blog/blog-img-3.jpg'
+import blogImg4 from '../assets/images/blog/blog-img-4.jpg'
+import blogImg5 from '../assets/images/blog/blog-img-5.jpg'
+import blogImg6 from '../assets/images/blog/blog-img-6.jpg'
 
 
 export const navigation = [
-  { id: 1, title: 'About' },
-  { id: 2, title: 'Service' },
-  { id: 3, title: 'Customers' },
-  { id: 4, title: 'Articles' }
+  { id: 1, title: 'About', link: '#' },
+  { id: 2, title: 'Service', link: '#' },
+  { id: 3, title: 'Customers', link: '#' },
+  { id: 4, title: 'Articles', link: '#' },
+  { id: 4, title: 'Blog', link: '/blog' },
 ]
 
 export const noon = [
@@ -181,4 +188,49 @@ export const blockButtons2 = [
   { id: 3, img: block2btn3 },
   { id: 2, img: block2btn4 },
   { id: 1, img: block2btn5}
+]
+
+export const blogItems = [
+  {
+    id: 1,
+    img: blogImg1,
+    title: "Unleash the Power of LinkedIn Group Messaging for Exceptional Talent Acquisition",
+    date: "Apr 24, 2023",
+    btn: "Read More",
+  },
+  {
+    id: 2,
+    img: blogImg2,
+    title: "LinkedIn InMail: Unbeatable Subject Lines for Success",
+    date: "Apr 24, 2023",
+    btn: "Read More",
+  },
+  {
+    id: 3,
+    img: blogImg3,
+    title: "LinkedIn Recruiter Pricing (2023)",
+    date: "Apr 24, 2023",
+    btn: "Read More",
+  },
+  {
+    id: 4,
+    img: blogImg4,
+    title: "9 Alternatives to Linkedin Recruiter (2023)",
+    date: "Apr 24, 2023",
+    btn: "Read More",
+  },
+  {
+    id: 5,
+    img: blogImg5,
+    title: "How to source talent on Medium",
+    date: "Apr 24, 2023",
+    btn: "Read More",
+  },
+  {
+    id: 6,
+    img: blogImg6,
+    title: "How to source talent on Kaggle",
+    date: "Apr 24, 2023",
+    btn: "Read More",
+  },
 ]

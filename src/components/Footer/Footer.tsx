@@ -1,5 +1,6 @@
 import { motion as m } from "framer-motion"
 import logo from '../../assets/images/logo-noon.png'
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -10,9 +11,9 @@ const Footer = () => {
         transition={{ delay: 0.4,duration: 1, ease: "easeInOut", }}
         className="container w-full flex justify-around text-xs text-white font-light mb-15 lg:hidden z-40"
       >
-        <a href="#">Blog</a>
-        <a href="#">Terms and Conditions</a>
-        <a href="#">Privacy Policy</a>
+        <Link to="/blog">Blog</Link>
+        <Link to="/terms-of-use">Terms and Conditions</Link>
+        <Link to="#">Privacy Policy</Link>
       </m.div>
 
       <div className="relative container max-w-256 flex items-center justify-between mb-3 lg:mb-6.5 z-40">
@@ -50,9 +51,9 @@ const Footer = () => {
           transition={{ delay: 0.4, duration: 1, ease: "easeInOut", }}
           className="hidden lg:block text-sm text-white font-light"
         >
-          <a href="#" className="mr-7.5">Blog</a>
-          <a href="#" className="mr-7.5">Terms and Conditions</a>
-          <a href="#">Privacy Policy</a>
+          <Link to="/blog" className="mr-7.5">Blog</Link>
+          <Link to="/terms-of-use" className="mr-7.5">Terms and Conditions</Link>
+          <Link to="#">Privacy Policy</Link>
         </m.div>
       </div>
 

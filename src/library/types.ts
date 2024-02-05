@@ -8,6 +8,7 @@ export interface INoon {
 export interface INavigation {
   id: number
   title: string
+  link: string
 }
 
 export interface ILogo {
@@ -52,4 +53,12 @@ export interface TitleProps {
   description?: string
   center?: boolean
   btn?: string
+}
+
+export interface IBlogItem {
+  id: number
+  title: string
+  date: string
+  img: string
+  btn: string
 }

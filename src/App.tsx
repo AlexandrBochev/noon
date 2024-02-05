@@ -1,20 +1,13 @@
-import { HeadCards } from "./components/HeadCards/HeadCards";
-import { Header } from "./components/Header/Header";
-import { Intro } from "./components/Intro/Intro";
-import { Meet } from "./components/Meet/Meet";
-import { TickerLogos } from "./components/TickerLogos/TickerLogos";
-import block1 from "./assets/images/block/block-1.png";
-import block2 from "./assets/images/block/block-2.png";
-import block3 from "./assets/images/block/block-3.png";
-import { Block } from "./components/Block/Block";
-import { Welcome } from "./components/Welcome/Welcome";
-import { Partners } from "./components/Partners/Partners";
-import { Workforce } from "./components/Workforce/Workforce";
-import { Customers } from "./components/Customers/Customers";
-import { Footer } from "./components/Footer/Footer";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { gsap } from "gsap";
-import { MainContext } from "./providers/MainContext";
+import { Header } from "./components/Header/Header"
+import { Footer } from "./components/Footer/Footer"
+import { Routes, Route } from "react-router-dom"
+import { useEffect, useLayoutEffect, useState } from "react"
+import { gsap } from "gsap"
+import { MainContext } from "./providers/MainContext"
+import { Home } from "./pages/Home/Home"
+import { Blog } from "./pages/Blog/Blog"
+import { BlogContent } from "./pages/Blog/BlogContent/BlogContent"
+import { TermsOfUse } from "./pages/TermsOfUse/TermsOfUse"
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
@@ -48,22 +41,12 @@ export default function App() {
       <div id="smooth-wrapper" className="relative w-full h-full overflow-hidden">
         <div id="smooth-content">
           <Header />
-          <main>
-            <Intro />
-            <TickerLogos />
-            <HeadCards />
-            <Meet />
-            <Welcome />
-            <div>
-              <Block titleIndex={2} img={block1} blockItems={1} changeOrder />
-              <Block titleIndex={3} img={block2} blockItems={2} />
-              <Block titleIndex={4} img={block3} blockItems={3} changeOrder />
-            </div>
-            <Partners />
-            <Workforce />
-            <Customers />
-            <TickerLogos />
-          </main>
+          <Routes>
+            <Route path="/" element={ <Home /> }/>
+            <Route path="/blog" element={ <Blog /> }/>
+            <Route path="/blog/:_id" element={ <BlogContent /> }/>
+            <Route path="/terms-of-use" element={ <TermsOfUse /> }/>
+          </Routes>
           <Footer />
         </div>
       </div>
