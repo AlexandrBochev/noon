@@ -2,10 +2,15 @@ import { useParams } from "react-router-dom"
 import { blogItems } from "../../../data/data"
 import { BlogContentIntro } from "../../../components/BlogContentIntro/BlogContentIntro"
 import { IBlogItem } from "../../../library/types"
+import { useEffect } from "react"
 
 const BlogContent = () => {
   const { _id } = useParams()
   const blogItem = blogItems.find((item: IBlogItem) => item.id === parseInt(_id || "0"))
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <main>

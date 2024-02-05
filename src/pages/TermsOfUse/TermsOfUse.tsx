@@ -1,7 +1,12 @@
 import { Player } from "@lottiefiles/react-lottie-player"
 import lottieSlideGrid from '../../library/lottie/lottie slide grid.json'
+import { useEffect } from "react"
 
 const TermsOfUse = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <main>
       <section>

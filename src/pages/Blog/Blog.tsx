@@ -3,11 +3,16 @@ import { blogItems } from "../../data/data"
 import { BlogCard } from "../../components/BlogCard/BlogCard"
 import { IBlogItem } from "../../library/types"
 import { Button } from "../../components/Button/Button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Blog = () => {
   const [count, setCount] = useState(6)
   const items = blogItems.slice(0, count)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <main id="Blog">
       <section>
