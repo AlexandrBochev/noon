@@ -28,8 +28,11 @@ const BlogCard = (props: IBlogItem) => {
             src={ props.img } alt={ props.title }
             className="w-full h-auto object-cover rounded-[20px] mb-10 md:mb-7.5"
           />
-
-          <h2 className="text-[22px] md:text-[32px]">{ props.title }</h2>
+          <Link to={`/blog/${ props.id }`}>
+            <h2 className="text-[22px] md:text-[32px] hover:scale-[102%] active:scale-100 transition-all duration-300">
+              { props.title }
+            </h2>
+          </Link>
         </div>
 
         <div className="w-full flex items-end justify-between z-40">
