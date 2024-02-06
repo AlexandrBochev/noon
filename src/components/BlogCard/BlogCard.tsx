@@ -9,7 +9,7 @@ const BlogCard = (props: IBlogItem) => {
     <div
       className="
         min-h-115 md:min-h-140
-        relative lg:p-7.5 rounded-[30px] overflow-hidden z-50 border border-transparent
+        relative lg:p-7.5 rounded-[30px] overflow-hidden z-10 border border-transparent
         before:bg-gradient-to-bl before:from-[#4F4F4F] before:to-[#4F4F4F]/20 before:to-40%
         before:border-inherit before:border before:rounded-[30px]
         before:absolute before:inset-0 before:z-10 before:bg-origin-border
@@ -22,8 +22,8 @@ const BlogCard = (props: IBlogItem) => {
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
 
-      <div className="absolute inset-0 p-5 w-full h-full flex flex-col justify-between">
-        <div className="z-40">
+      <div className="absolute inset-0 p-5 w-full h-full flex flex-col z-40 justify-between">
+        <div>
           <img
             src={ props.img } alt={ props.title }
             className="w-full h-auto object-cover rounded-[20px] mb-10 md:mb-7.5"
