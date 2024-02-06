@@ -34,13 +34,13 @@ const TitleMotion2 = {
 
 const Intro = () => {
   return (
-    <section className="relative w-full h-svh mb-24 lg:mb-35 overflow-hidden">
+    <section className="relative w-full h-svh mb-24 lg:mb-35">
       <video
         src={ lineWaves }
         autoPlay
         muted
         loop
-        className="absolute top-0 left-0 w-full h-svh object-cover"
+        className="absolute top-30 left-0 w-full h-svh object-cover"
       />
 
       <div className="relative container h-svh flex flex-col items-center justify-between z-10 pt-52 mb-40 mx-auto">
@@ -132,7 +132,8 @@ const Intro = () => {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-black to-black/0" />
+      <div className="absolute -bottom-30 left-0 w-full h-[30vh] bg-gradient-to-t from-black from-20% to-black/0" />
+      <div className="absolute top-30 left-0 w-full h-[40vh] bg-gradient-to-t from-black/0 to-black to-80%" />
     </section>
   )
 }
