@@ -5,6 +5,7 @@ import SliderCards from "../SliderCards/SliderCards"
 import { IPartner } from "../../library/types"
 import { CARDS } from "../../library/constants"
 import { Button } from "../Button/Button"
+import { Dots } from "../Dots/Dots"
 
 const Partners = () => {
   return (
@@ -21,6 +22,7 @@ const Partners = () => {
           )}
         </SliderCards>
       </m.div>
+      <Dots />
       <div className="container hidden lg:flex justify-center mx-auto">
         <Button arrow>View More</Button>
       </div>

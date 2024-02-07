@@ -12,11 +12,17 @@ const SliderCards = ({ children, amount }: SliderCardsProps) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    pauseOnHover: true,
+    pauseOnHover: false,
     arrows: false,
     touchThreshold: 50,
-    // draggable:false,
-    // touchMove: false,
+    // responsive: [
+    //   {
+    //     breakpoint: 640,
+    //     settings: {
+    //       dots: false
+    //     }
+    //   },
+    // ]
   }
 
   return (

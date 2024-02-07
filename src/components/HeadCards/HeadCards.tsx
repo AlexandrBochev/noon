@@ -9,7 +9,7 @@ const HeadCards = () => {
   return (
     <m.section
       { ...CARDS }
-      className="w-[112rem] mx-auto py-36 overflow-hidden"
+      className="w-[112rem] mx-auto pt-36 overflow-hidden"
     >
       <SliderCards amount={ 4 }>
         {headCards.map((headCard: IHeadCard) =>

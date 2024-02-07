@@ -26,12 +26,19 @@ import { motion as m } from "framer-motion"
 import { BLOCK_ITEM_3 } from '../../library/constants'
 import { Button2 } from '../Button2/Button2'
 import { Button3 } from '../Button3/Button3'
+import background2 from "../../assets/images/block/block-3-2.png";
 
 const BlockItem3 = () => {
   return (
+    <>
+    <img
+      src={background2} alt="background2"
+      className="absolute inset-0 w-full h-full md:hidden object-cover"
+    />
     <m.div
-      className="absolute inset-0 w-full h-full px-[3%] pt-[3%]"
+      className="hidden md:block absolute inset-0 w-full h-full px-[3%] pt-[3%]"
     >
+
       <div className="w-full flex items-start justify-between mb-[3%]">
         <div className="flex">
           <img
@@ -286,6 +293,7 @@ const BlockItem3 = () => {
         </m.div>
       </m.div>
     </m.div>
+    </>
   )
 }
 

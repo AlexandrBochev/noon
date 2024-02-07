@@ -41,7 +41,7 @@ const Meet = () => {
   };
 
   return (
-    <section className="container mx-auto overflow-hidden About" id="About">
+    <section className="container mx-auto pt-36 overflow-hidden About" id="About">
       <div className="mb-20">
         <Title props={titleItems[0]} />
       </div>

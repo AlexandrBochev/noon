@@ -8,6 +8,7 @@ import { Title } from "../Title/Title";
 import { motion as m } from "framer-motion";
 import { MouseFollowLight } from "../mouse-follow-light";
 
+
 interface BlockProps {
   titleIndex: number;
   img: string;
@@ -41,6 +42,7 @@ const Block = ({ titleIndex, img, changeOrder, blockItems }: BlockProps) => {
               transition={{ delay: 0.6, duration: 0.8, ease: "easeInOut" }}
               className="w-full"
             />
+
             {blockItems === 1 && <BlockItem1 />}
             {blockItems === 2 && <BlockItem2 />}
             {blockItems === 3 && <BlockItem3 />}

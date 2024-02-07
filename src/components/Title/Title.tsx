@@ -16,9 +16,11 @@ const Title = ({ props }: { props: TitleProps }) => {
             transition={{ delay: i * 0.1, duration: 0.8, ease: 'easeOut' }}
             className="inline-block mr-3 xl:mr-5"
           >
-            { word }
+            { word }          
           </m.span>
         )}
+
+        <br className="md:hidden" />
 
         {span1 && span1.map((word, i) =>
           <m.span

@@ -10,6 +10,7 @@ import { Workforce } from "../../components/Workforce/Workforce"
 import block1 from "../../assets/images/block/block-1.png"
 import block2 from "../../assets/images/block/block-2.png"
 import block3 from "../../assets/images/block/block-3.png"
+import { Dots } from "../../components/Dots/Dots"
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Intro />
       <TickerLogos />
       <HeadCards />
+      <Dots />
       <Meet />
       <Welcome />
       <div>

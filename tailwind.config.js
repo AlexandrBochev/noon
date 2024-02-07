@@ -62,12 +62,23 @@ export default {
       },
       animation: {
         ticker: 'ticker 8s linear infinite',
+        // dot1: 'dot1 8s infinite',
+        // dot2: 'dot2 8s infinite',
+        // dot3: 'dot3 8s infinite',
+        // dot4: 'dot4 8s infinite',
       },
       keyframes: {
         ticker: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+        // dot1: {
+        //   '0%': { width: '18px', background: 'white' },
+        //   '25%': { width: '18px', background: 'white' },
+        //   '50%': { width: '3px', background: '#7F7F7F' },
+        //   '75%': { width: '3px', background: '#7F7F7F' },
+        //   '100%': { width: '3px', background: 'white' },
+        // },
       },
     },
   },
