@@ -53,6 +53,7 @@ export interface TitleProps {
   description?: string
   center?: boolean
   btn?: string
+  br?: boolean
 }
 
 export interface IBlogItem {

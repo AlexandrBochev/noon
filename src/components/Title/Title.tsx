@@ -4,7 +4,7 @@ import { Button } from "../Button/Button"
 import { motion as m } from "framer-motion"
 
 const Title = ({ props }: { props: TitleProps }) => {
-  const { title, span1, span2, description, center, btn } = props
+  const { title, span1, span2, description, center, btn, br } = props
 
   return (
     <section className={`${ center ? 'text-center' : 'text-left' } text-balance text-[2.25rem] 2xl:text-[3.625rem] mx-auto z-50`}>
@@ -20,7 +20,7 @@ const Title = ({ props }: { props: TitleProps }) => {
           </m.span>
         )}
 
-        <br className="md:hidden" />
+        {br && <br className="md:hidden" />}
 
         {span1 && span1.map((word, i) =>
           <m.span

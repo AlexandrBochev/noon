@@ -118,6 +118,7 @@ export const titleItems = [
     span1: splitWords("AI Workforce"),
     description: "An elastic recruiting team that scales with your hiring needs",
     center: true,
+    br: true,
   },
   {
     title: splitWords("Hear it from our"),

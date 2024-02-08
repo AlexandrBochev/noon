@@ -9,7 +9,7 @@ const trans = {
 
 const Dots = () => {
   return (
-    <div className="flex w-9 mt-5 justify-between mx-auto">
+    <div className="md:hidden flex w-9 mt-5 justify-between mx-auto">
       <m.div
         animate={{
           width: ['18px', '18px', '18px', '18px', '3px', '3px', '3px', '3px', '3px', '3px', '3px', '3px', '3px', '3px', '3px', '3px', '18px'],
